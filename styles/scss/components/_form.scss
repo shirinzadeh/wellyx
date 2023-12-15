@@ -1,0 +1,352 @@
+
+.form {
+   background-color: $white;
+   border: 1px solid $gray-400;
+   border-radius: 1rem;
+   padding: 2rem;
+
+   @include small {
+      padding: 1rem;
+   }
+
+   &__head {
+      margin-bottom: 1rem;
+      text-align: center;
+
+      @include small {
+         margin-bottom: .5rem;
+      }
+
+      img {
+         margin-bottom: 1rem;
+      }
+   }
+
+   &__text {
+      font-size: 0.875rem;
+      color: $dark-300;
+      margin-top: .5rem;
+      line-height: 1.25rem;
+      white-space: pre-line;
+
+      a span {
+         color: $primary-base;
+      }
+   }
+
+   .small-text {
+      font-weight: 500;
+      margin-top: .25rem;
+   }
+
+   &__button {
+      min-width: 5.9375rem;
+      padding: .75rem 0;
+      margin-top: 1rem;
+   }
+
+   &__select {
+      width: 100% !important;
+
+      .dropdown-toggle {
+         background: $white;
+         border: 1px solid $gray-400;
+         border-radius: 0.75rem;
+         padding: 0.875rem 1rem;
+         @include transition(.2s);
+
+         :is(&:hover,&:focus,&:active  ) {
+            border: 1px solid $gray-500;
+            background-color: transparent !important;
+            @include transition(.2s);
+         }
+
+         &:hover {
+            border: 1px solid $gray-500;
+         }
+
+         &:focus {
+            outline: none !important;
+         }
+      }
+
+      .dropdown-menu {
+         margin: 0;
+         margin-top: -1px;
+         box-shadow: 0px 2px 2px rgba(5, 15, 33, 0.06), 0px 2px 4px rgba(5, 15, 33, 0.06);
+         border-radius:0 0  0.75rem 0.75rem;
+         border: 1px solid $gray-400;
+
+         .dropdown-item {
+            font-weight: 500;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+
+            span {
+               @include transition;
+            }
+            &:hover {
+               background-color: transparent;
+
+               span {
+                  color: $primary-base;
+                  @include transition;
+               }
+            }
+         }
+         .dropdown-item.active, .dropdown-item:active {
+            background-color: transparent;
+         }
+      }
+      
+      .filter-option {
+         overflow: initial !important;
+      }
+
+      .filter-option-inner-inner {
+         font-weight: 500;
+         font-size: 0.875rem;
+         line-height: 1.25rem;
+      }
+
+      //Dropup menu
+      &.dropup.show {
+         .dropdown-menu {
+            border-radius:.75rem .75rem 0 0;
+         }
+
+         .dropdown-toggle {
+            border-radius: 0 0 .75rem .75rem !important;
+         }
+      }  
+   }
+
+   &__label {
+      pointer-events: none;
+      display: inline-block;
+      font-weight: 500;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      position: absolute;
+      top: 50%;
+      left: 1rem;
+      @include transform(translateY(-50%));
+            // top: 0.375rem;
+      white-space: nowrap;
+      @include transition(.1s linear);
+   }
+}
+
+.form-floating {
+   position: relative;
+   .form-control {
+      padding: 0.875rem 1rem ;
+      height: 3rem;
+   }
+
+   > label {   
+      padding: 0.875rem 1rem ;
+      font-weight: 500;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      transform-origin: 0 0;
+      transition: opacity .2s ease-in-out,transform .2s ease-in-out;
+      pointer-events: none;
+
+   }
+}
+
+.form__select .dropdown-toggle:not(:disabled):not(.disabled).active, 
+.form__select.show>.btn-light.dropdown-toggle,
+.form__select.show>.dropdown-toggle.has-error {
+   background-color: transparent;
+   border: 1px solid $gray-400;
+   border-bottom-left-radius: 0 ;
+   border-bottom-right-radius: 0;
+   &::after {
+      background-image: url(../../images/icons/Material/Up-chevron.svg);
+      @include transition(.2s);
+   }
+
+}
+
+.form-floating>.form-control:focus~label, .form-floating>.form-control:not(:placeholder-shown)~label, .form-floating>.form-select~label {
+   opacity: 1;
+   transform: scale(.85) translateY(-0.5rem) translateX(0.15rem);
+   visibility: visible;
+   color: $gray-900;
+}
+
+.form-floating>.form-control:focus, .form-floating>.form-control:not(:placeholder-shown) {
+   padding-top: 1.625rem;
+   padding-bottom: 0.625rem;
+}
+
+.bootstrap-select>.dropdown-toggle.bs-placeholder, .bootstrap-select>.dropdown-toggle.bs-placeholder:active, .bootstrap-select>.dropdown-toggle.bs-placeholder:focus, .bootstrap-select>.dropdown-toggle.bs-placeholder:hover {
+   color: $gray-900 !important;
+}
+
+.bootstrap-select .dropdown-toggle:focus, .bootstrap-select>select.mobile-device:focus+.dropdown-toggle {
+   outline: 0 !important;
+}
+
+//On focus selectbox
+// .btn-light:not(:disabled):not(.disabled).active:focus, .btn-light:not(:disabled):not(.disabled):active:focus, .show>.btn-light.dropdown-toggle:focus {
+//    border-bottom-left-radius: 0;
+//    border-bottom-right-radius: 0;
+
+//    &::after {
+//       @include transform(rotate(180deg));
+//    }
+// }
+
+.form-control {
+   font-size: 0.875rem;
+   line-height: 1.25rem;
+   font-weight: 500;
+}
+
+.form-control:focus {
+   border-color: $primary-base;
+   box-shadow: none;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+}
+
+.form-control::placeholder {
+   visibility: hidden;
+}
+
+.form-select-arrow .dropdown-toggle {
+   &::after {
+      content: '';
+      background-image: url(../../images/icons/Material/Down-chevron.svg);
+      height: 20px;
+      width: 20px;
+      display: inline-block;
+      margin-left: 0;
+      vertical-align: 0;
+      border: none;
+      @include transition(.2s);
+   }
+}
+
+.bs-searchbox {
+   padding: 0;
+
+   input{
+      padding: 1rem 1.25rem;
+      border: 1px solid $primary-base;
+      border-radius: 0.875rem;
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      color: $black !important;
+      background-color: $white;
+   }
+}
+
+.bs-searchbox {
+   position: relative;
+   
+   &::after {
+      content: '';
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 50%;
+      @include transform(translateY(-50%));
+      right: 1.25rem;
+      cursor: pointer;
+   }
+
+   &::after {
+      background-image: url(../../images/icons/Material/Closesmall.svg);
+   }
+}
+
+.form-select-search {
+   .filter-option-inner {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-weight: 500;
+      color: $black;
+   }
+   .filter-option-inner-inner {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      color: $gray-900 !important;
+   }
+   .dropdown-toggle {
+      padding: calc(1rem - 1px) calc(1.25rem - 1px);
+      border-radius: .875rem !important;
+
+      &::after {
+         display: none;
+      }
+   }
+   
+   .dropdown-menu {
+      border-radius: 0.875rem;
+      padding: 0;
+      background-color: transparent;
+      box-shadow: none;
+      border: none;
+      -webkit-transform: none !important;
+         -moz-transform: none !important;
+          -ms-transform: none !important;
+           -o-transform: none !important;
+              transform: none !important;
+
+      &.show {
+         min-height: 100% !important;
+      }
+      
+      > .inner {
+         border-radius: 0.875rem;
+         margin-top: .5rem;      
+         box-shadow: 0px 2px 2px rgba(5, 15, 33, 0.06), 0px 2px 4px rgba(5, 15, 33, 0.06);
+         border-radius: 0.75rem;
+         border: 1px solid $gray-400;
+         background-color: $white;
+
+         .dropdown-menu {
+            padding: 1rem 1.25rem;
+
+            > li {
+               &:not(:last-child) {
+                  margin-bottom: 0.75rem;
+               }
+               //remove first item
+               &.selected {
+                  display: none;
+               }
+               a {
+                  padding: 0;
+               }
+            }
+         }
+      }
+
+      .no-results {
+         display: none;
+      }
+   }
+
+   &.dropup {
+      .dropdown-toggle,
+      .dropdown-menu {
+         border-radius: .875rem !important;
+      }
+   }
+}
+
+.js-reverse {
+   top: auto;
+   bottom: 100%;
+}

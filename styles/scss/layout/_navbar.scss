@@ -1,0 +1,121 @@
+.navbar {
+   @include flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 1.5rem 0; 
+
+   @include small {
+      padding: 1.25rem 0;
+   }
+
+   .nav-brand {
+      img {
+         display: block;
+      }
+   }
+
+   &-nav {
+      .nav-item {
+         &:not(:first-child) {
+            margin-left: 4rem;
+
+            @include small {
+               margin-left: 0;
+            }
+         }
+
+
+      }
+
+      .nav-link {
+         font-weight: 500;
+         font-size: 0.875rem;
+         line-height: 1.25rem;
+         padding: 0 !important;
+         // border-bottom: 1px solid transparent;
+         @include transition;
+         
+         @include small {
+            color: $white !important;
+            font-weight: 500;
+            line-height: 1.5rem;
+         }
+
+         &::after {
+            content: '';
+            width: 0px;
+            height: 1px;
+            display: block;
+            background-color: $black;
+            @include transition(.2s);
+
+            @include small {
+               display: none;
+            }
+          }
+
+         :is(&:hover, &:focus) {
+            color: $primary-base !important;
+
+            &::after {
+               width: 100%;
+               background-color: $primary-base;
+            }
+         }
+
+         // :is(&:hover, &:focus) {
+         //    // text-decoration-color: $primary-base;
+         //    // border-bottom: 1px solid $primary-base;
+         //    color: $primary-base !important;
+         //    @include transition(1s);
+            
+         //    .nav-link::after {
+         //       width: 100%;
+         //    }
+         // }
+
+      }
+   }
+
+   &-collapse {
+      flex-grow: 0;
+   }
+
+   &-toggler {
+      padding: 0;
+
+      i {
+         font-size: 2rem;
+         color: $black;
+      }
+   }
+
+   &-lang {
+      @include flex;
+      align-items: center;
+      color: $dark-500 !important;
+
+      &:hover {
+         color: $black !important;
+      }
+
+      i {
+         margin-right: .5rem;
+      }
+      span {
+         font-weight: 500;
+         font-size: 0.875rem;
+         line-height: 1.25rem;
+      }
+   }
+
+   &--border {
+      border-bottom: 1px solid $gray-400;
+      padding-bottom: 1.4375rem;
+
+      @include small {
+         padding-left: 1.5rem;
+         padding-right: 1.5rem;
+      }
+   }
+}

@@ -1,0 +1,107 @@
+.input_icon {
+   position: absolute;
+   top: 50%;
+   @include transform(translateY(-50%));
+   color: $gray-900;
+   border-radius: 0.75rem
+}
+
+.main-input {
+   &-between {
+      @include flex-btwn;
+      gap: 1rem;
+
+      @include small {
+         gap: .5rem;
+      }
+
+      .main-input-group {
+         flex:1;
+      }
+   }
+
+   &-group {
+      position: relative;
+
+      &:not(:last-child) {
+         margin-bottom: 0.75rem;
+
+         @include small {
+            margin-bottom: 0.75rem !important;
+         }
+      }
+
+      &__text {
+         margin-top: .25rem;
+      }
+
+      .input_icon {
+         right: 1rem;
+         > i {
+            font-size: 1.25rem;
+         }
+      }
+   }
+
+   &__field {
+      background: $white;
+      border: 1px solid $gray-400;
+      border-radius: 0.75rem;
+      // padding: 0.875rem 1rem !important;
+   }
+
+   &__text {
+      margin-top: 1rem;
+   }
+
+   .form-text {
+      margin-top: 0.25rem;
+      color: $danger;
+      display: none;
+   }
+
+   .form-floating {
+      label {
+         color: $gray-900;
+      }
+   }
+}
+
+  //Search input
+.main-input-search {
+   width: 3rem;
+   @include transition(width .2s ease);
+
+   @include small {
+      @include transition(none);
+   }
+
+   .main-input-group {
+      .form-control {
+         padding: 0.6875rem;
+         padding-right: 2.1875rem;
+         height: auto;
+         font-size: 1rem;
+         font-weight: 500;
+         line-height: 1.5rem;
+         color: $black;
+         //for animation
+         // visibility: hidden;
+         // width: 0;
+         // margin-left: auto;
+         @include transition; 
+      }
+
+      i {
+         font-size: 1.5rem;
+         display: inline;
+      }
+   }
+
+   .header-nav__searchicon {
+      right: 0;
+      padding: 0.75rem;
+      background-color: $gray-200;
+      @include transition;
+   }
+}

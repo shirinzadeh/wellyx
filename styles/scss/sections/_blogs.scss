@@ -1,0 +1,90 @@
+.blog-footer {
+   background-color: transparent;
+   padding: 0;
+   border-top: none;
+   font-weight: 600;
+   font-size: 0.75rem;
+   line-height: 1rem;
+   text-transform: uppercase;
+   color: $gray-900;
+}
+
+.blog-tag {
+   font-weight: bold;
+   font-size: 0.75rem;
+   line-height: 1rem;
+   letter-spacing: 1.5px;
+   text-transform: uppercase;
+   padding: .25rem .5rem;
+   display: inline-block;
+   border-radius: 6px;
+   width: fit-content;
+   margin-bottom: 1rem;
+}
+
+.blogs {
+   &__boxes {
+      @include flex;
+      gap: 1.5rem;
+      border: none;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+
+      & > div {
+         scroll-snap-align: start;
+         scroll-snap-stop: always;
+      }
+   }
+
+   &__box {
+      @include medium {
+         width: 16rem;
+      }
+      .card {
+         border: none;
+         height: 100%; //for same height columns;
+
+         &:hover {
+            .card-text {
+               color: $primary-base !important;
+               @include transition;
+            }
+         }
+
+         &-img-top {
+            border-radius: 1rem;
+            background-color: #C4C4C4;
+         }
+
+         &-body {
+            padding: 1rem 0 0;
+            @include flex; //for working footer margin top auto 
+            flex-direction: column;
+         }
+
+         &-title {
+            display: block;
+         }
+
+         &-text {
+            font-weight: 500;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            display: block;
+            @include transition;
+            margin-bottom: 1rem;
+
+            :is(&:hover,&:focus) {
+               color: $primary-base !important;
+               @include transition;
+            }
+         }
+
+         &-footer {
+            margin-top: auto !important; //always display in bottom of the card
+         }
+      }
+   }
+}

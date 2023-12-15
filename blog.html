@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- Google Tag Manager -->
+   <script>(function (w, d, s, l, i) {
+         w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+               new Date().getTime(), event: 'gtm.js'
+         }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+               'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-W7DJKX7');</script>
+   <!-- End Google Tag Manager -->
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Elyx</title>
+   <link rel="shortcut icon" type="image/x-icon" href="images/icons/favicon/favicon.svg">
+   <!-- Bootstrap 4 -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+   <!-- Animate css  -->
+   <link rel="stylesheet" href="plugins/animate/animate.css">
+   <!-- Selectpicker  -->
+   <link rel="stylesheet" href="plugins/bootstrapselect-1.13.14/css/bootstrap-select.min.css">
+   <!-- Owl carousel  -->
+   <link rel="stylesheet" href="plugins/owl-carousel/css/owl.carousel.min.css">
+   <link rel="stylesheet" href="plugins/owl-carousel/css/owl.theme.default.min.css">
+   <!-- style css  -->
+   <link rel="stylesheet" href="styles/css/style.min.css">
+</head>
+
+<body>
+   <header class="header ">
+      <nav class="navbar navbar-expand-md navbar--border">
+         <div class="container">
+            <a href="index.html" class="logo d-none d-md-block"><img src="images/logo/logo.svg" alt="Logo" class="d-block"></a>
+            <a href="index.html" class="logo logo-sm d-md-none"><img src="images/logo/logo-sm.svg" alt="Logo" class="d-block"></a>
+
+            <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation">
+               <i class="icon-menu"></i>
+            </button>
+
+            <div class="side-menu">
+               <div class="container">
+                  <div class="side-menu__head d-md-none">
+                     <a href="index.html" class="logo logo-sm-white"><img src="images/logo/logo-sm-white.svg" alt="Logo" class="d-block"></a>
+                     <button class="btn" type="button">
+                        <i class="icon-close icon-block i_close" id="closeIcon"></i>
+                     </button>
+                  </div>
+
+                  <div class="side-menu__inner">
+                     <ul class="navbar-nav">
+                        <li class="nav-item">
+                           <a class="nav-link" href="driver.html">Driver</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="rider.html">Rider</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="help.html">Help</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                     </ul>
+
+                     <div class="navbar-langs d-md-none">
+                        <a href="#" class="navbar-lang">
+                           <i class="icon-lang icon-block"></i>
+                           <span>English</span>
+                        </a>
+                        <a href="#" class="navbar-lang">
+                           <i class="icon-location icon-block"></i>
+                           <span>Azerbaijan</span>
+                        </a>
+                     </div>
+
+                     <!-- Social icons  -->
+                     <div class="navbar-social social d-md-none">
+                        <a href="#" class="social__icon"><i class="icon-facebook icon-block"></i></a>
+                        <a href="#" class="social__icon"><i class="icon-instagram icon-block"></i></a>
+                        <a href="#" class="social__icon"><i class="icon-tik-tok icon-block"></i></a>
+                        <a href="#" class="social__icon"><i class="icon-twitter icon-block"></i></a>
+                     </div>
+                     <!-- End Social Icons -->
+                  </div>
+               </div>
+            </div>
+         </div>
+      </nav>
+   </header>
+
+   <section class="blog elyx-section-big-bottom">
+      <div class="container">
+         <div class="heading-wrapper">
+            <div class="heading">
+               <h3 class="h3">Blog</h3>
+            </div>
+
+            <div class="">
+               <div class="blog-category ">
+                  <select name="" id="#blogSearch" class="blog-category-select form-select-arrow form-select selectpicker">
+                     <option value="1" selected>All categories</option>
+                     <option value="2" data-token="elyx">Elyx</option>
+                     <option value="3" data-token="marketing">Marketing</option>
+                     <option value="4" data-token="driver">Driver</option>
+                     <option value="5" data-token="rider">Rider</option>
+                     <option value="6" data-token="">Other</option>
+                  </select>
+               </div>
+               <!-- Search icon  -->
+               <div class="main-input main-input-search">
+                  <div class="main-input-group">
+                     <input type="text" class="form-control main-input__field form_field" id="name" placeholder="Last Name" required>
+                     <button class="btn header-nav__searchicon input_icon"><i class="icon-search icon-block"></i></button>
+                  </div>
+               </div>
+            </div>
+            <!-- End search icon  -->
+         </div> <!-- .blog__head-->
+
+         <div class="blog__inner">
+            <div class="blog__content">
+               <!-- first row  -->
+               <div class="blog__content-row">
+                  <div class="blog__content__image">
+                     <a href="blog-inner.html">
+                        <img src="images/blog/blog1.png" alt="Sale">
+                     </a>
+                  </div>
+                  <a href="blog-inner.html" class="blog__content__article">
+                     <div>
+                        <div class="blog-tag danger danger-bg">Sale</div>
+                        <p class="article-title">The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made clear to you at the point we ask.</p>
+                        <p class="article-text">At elyx.com, accessible from elyx.com, one of our main priorities is the privacy of our visitors. </p>
+                     </div>
+                     <div class="blog__content__article__footer blog-footer">JUNE 24, 2021</div>
+                  </a>
+               </div>
+               <!-- end first row  -->
+
+               <!-- second row  -->
+               <div class="blog__content-row">
+                  <a href="blog-inner.html" class="blog__content__article">
+                     <div>
+                        <div class="blog-tag success success-bg">Ride</div>
+                        <p class="article-title">The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made clear to you at the point we ask.</p>
+                        <p class="article-text">At elyx.com, accessible from elyx.com, one of our main priorities is the privacy of our visitors. </p>
+                     </div>
+                     <div class="blog__content__article__footer blog-footer">JUNE 24, 2021</div>
+                  </a>
+                  <div class="blog__content__image">
+                     <a href="blog-inner.html">
+                        <img src="images/blog/blog2.png" alt="Sale">
+                     </a>
+                  </div>
+               </div>
+               <!-- end second row  -->
+
+               <!-- third row  -->
+               <div class="blog__content-row">
+                  <div class="blog__content__image">
+                     <a href="blog-inner.html">
+                        <img src="images/blog/blog3.png" alt="Sale">
+                     </a>
+                  </div>
+                  <a href="blog-inner.html" class="blog__content__article">
+                     <div>
+                        <div class="blog-tag primary bg-primary-light">Elyx</div>
+                        <p class="article-title">The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made clear to you at the point we ask.</p>
+                        <p class="article-text">At elyx.com, accessible from elyx.com, one of our main priorities is the privacy of our visitors. </p>
+                     </div>
+                     <div class="blog__content__article__footer blog-footer">JUNE 24, 2021</div>
+                  </a>
+               </div>
+               <!-- end third row  -->
+
+               <!-- fourth row  -->
+               <div class="blog__content-row">
+                  <a href="blog-inner.html" class="blog__content__article">
+                     <div>
+                        <div class="blog-tag warning warning-bg">Advertisement</div>
+                        <p class="article-title">The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made clear to you at the point we ask.</p>
+                        <p class="article-text">At elyx.com, accessible from elyx.com, one of our main priorities is the privacy of our visitors. </p>
+                     </div>
+                     <div class="blog__content__article__footer blog-footer">JUNE 24, 2021</div>
+                  </a>
+                  <div class="blog__content__image">
+                     <a href="blog-inner.html">
+                        <img src="images/blog/blog4.png" alt="Sale">
+                     </a>
+                  </div>
+               </div>
+               <!-- end forth row  -->
+
+               <div id="hiddenElems" class="js-hidden">
+                  <!-- first row  -->
+                  <div class="blog__content-row">
+                     <div class="blog__content__image">
+                        <a href="blog-inner.html">
+                           <img src="images/blog/blog1.png" alt="Sale">
+                        </a>
+                     </div>
+                     <article class="blog__content__article">
+                        <div>
+                           <div class="blog-tag danger danger-bg">Sale</div>
+                           <p class="article-title">The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made clear to you at the point we ask.</p>
+                           <p class="article-text">At elyx.com, accessible from elyx.com, one of our main priorities is the privacy of our visitors. </p>
+                        </div>
+                        <div class="blog__content__article__footer blog-footer">JUNE 24, 2021</div>
+                     </article>
+                  </div>
+                  <!-- end first row  -->
+
+                  <!-- second row  -->
+                  <div class="blog__content-row">
+                     <article class="blog__content__article">
+                        <div>
+                           <div class="blog-tag danger danger-bg">Sale</div>
+                           <p class="article-title">The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made clear to you at the point we ask.</p>
+                           <p class="article-text">At elyx.com, accessible from elyx.com, one of our main priorities is the privacy of our visitors. </p>
+                        </div>
+                        <div class="blog__content__article__footer blog-footer">JUNE 24, 2021</div>
+                     </article>
+                     <div class="blog__content__image">
+                        <a href="blog-inner.html">
+                           <img src="images/blog/blog2.png" alt="Sale">
+                        </a>
+                     </div>
+                  </div>
+                  <!-- end second row  -->
+               </div>
+            </div> <!-- .blog__contents-->
+
+            <a type="button" class="btn showmore-btn" id="showMore">
+               <span>See more</span>
+            </a>
+         </div>
+
+         <h5 class="h5 h5-sb search-error-msg">There were no blog entries that matched your search term
+            <!-- The word not found will be written here -->
+            <span></span>
+         </h5>
+      </div>
+   </section>
+
+   <footer class="footer ">
+      <div class="elyx-section-big">
+         <div class="container">
+            <div class="footer__top">
+               <div class="footer__top-left">
+                  <div><img src="images/logo/logo-white.svg" class="d-block" alt="Logo"></div>
+                  <p>Elit vitae pharetra auctor commodo libero, elementum tellus nisi, porta. Et arcu sed nec accumsan at pellentesque neque.</p>
+
+                  <!-- Social icons  -->
+                  <div class="social d-md-none">
+                     <a href="#" class="social__icon"><i class="icon-facebook icon-block"></i></a>
+                     <a href="#" class="social__icon"><i class="icon-instagram icon-block"></i></a>
+                     <a href="#" class="social__icon"><i class="icon-tik-tok icon-block"></i></a>
+                     <a href="#" class="social__icon"><i class="icon-twitter icon-block"></i></a>
+                  </div>
+                  <!-- End social icons  -->
+               </div>
+               <div class="footer__top-right">
+                  <!-- Block stores  -->
+                  <div class="footer__stores stores">
+                     <a href="#" class="btn store elyx-animate">
+                        <i class="icon-apple icon-block"></i>
+                        <div class="store-text">
+                           <div class="store-text-top">Download on the</div>
+                           <div class="store-text-bottom">App Store</div>
+                        </div>
+                     </a>
+                     <a href="#" class="btn store elyx-animate">
+                        <i class="icon-android icon-block"></i>
+                        <div class="store-text">
+                           <div class="store-text-top">Get it on </div>
+                           <div class="store-text-bottom">Google Play</div>
+                        </div>
+                     </a>
+                     <a href="#" class="btn store elyx-animate">
+                        <i class="icon-huawei icon-block"></i>
+                        <div class="store-text">
+                           <div class="store-text-top">available on the</div>
+                           <div class="store-text-bottom">AppGallery</div>
+                        </div>
+                     </a>
+                  </div>
+                  <!-- End Block stores  -->
+               </div>
+            </div>
+
+            <div class="footer__middle">
+               <div class="footer__middle-left">
+                  <div class="lang_area">
+                     <!-- Language dropdown  -->
+                     <nav class="lang_dropdown">
+                        <ul>
+                           <!-- <li class="current-menu-item"><li> -->
+                           <li class="select-lang">
+                              <a class="langtitle" type="button">
+                                 <i class="icon-lang icon-block"></i>
+                                 <span>English</span>
+                              </a>
+                              <ul class="langlist">
+                                 <li class="langoption">
+                                    <a>
+                                       <img src="images/icons/Flag/AZE.svg" class="img-fluid" alt="AZE">
+                                       <span>Azərbaycanca</span>
+                                    </a>
+                                 </li>
+                                 <li class="langoption">
+                                    <a>
+                                       <img src="images/icons/Flag/UK.svg" class="img-fluid" alt="UK">
+                                       <span>English</span>
+                                    </a>
+                                 </li>
+                                 <li class="langoption">
+                                    <a>
+                                       <img src="images/icons/Flag/RU.svg" class="img-fluid" alt="RU">
+                                       <span>Русский</span>
+                                    </a>
+                                 </li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </nav>
+
+                     <div class="d-flex">
+                        <i class="icon-location icon-block"></i>
+                        <span>Azerbaijan</span>
+                     </div>
+                     <!--End Language dropdown  -->
+                  </div>
+
+                  <!-- Social icons  -->
+                  <div class="social d-none d-md-flex">
+                     <a href="#" class="social__icon"><i class="icon-facebook icon-block"></i></a>
+                     <a href="#" class="social__icon"><i class="icon-instagram icon-block"></i></a>
+                     <a href="#" class="social__icon"><i class="icon-tik-tok icon-block"></i></a>
+                     <a href="#" class="social__icon"><i class="icon-twitter icon-block"></i></a>
+                  </div>
+                  <!-- End social icons  -->
+               </div> <!-- .footer__middle-left -->
+
+               <div class="footer__middle-right">
+                  <ul>
+                     <li>Products</li>
+                     <li><a href="rider.html"><span>Riders</span></a></li>
+                     <li><a href="driver.html"><span>Driver</span></a></li>
+                     <li><a href="" class="mb-0"><span>Cities</span></a></li>
+                  </ul>
+                  <ul>
+                     <li>About us</li>
+                     <li><a href="about.html"><span>About elyx</span></a></li>
+                     <li><a href="blog.html"><span>Blog</span></a></li>
+                     <li><a href="contact.html" class="mb-0"><span>Contact us</span></a></li>
+                  </ul>
+                  <ul>
+                     <li>Resources</li>
+                     <li> <a href="help.html"><span>Help Center</span></a></li>
+                     <li><a href="terms.html"><span>Terms and conditions</span></a></li>
+                     <li> <a href="privacy.html" class="mb-0"><span>Privacy Policy</span></a></li>
+                  </ul>
+               </div>
+               <!--.footer__middle-right-->
+            </div> <!-- .footer__middle -->
+         </div>
+      </div>
+
+      <div class="footer__bottom">
+         <div class="container">
+            <div class="footer__bottom__inner">
+               <div class="footer__bottom-left">
+                  <p>All Rights Reserved © 2021 Elyx, Inc.</p>
+                  <ul>
+                     <li><a href=""><span>Legal</span></a></li>
+                     <li><a href=""><span>Cookies</span></a></li>
+                  </ul>
+               </div>
+               <div class="footer__bottom-right">
+                  <p>from Azerbaijan with ❤️</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+
+   <!-- loader -->
+   <div id="elyx-loader" class="show fullscreen" title="2">
+      <svg class="circular" version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+         <path fill="#000" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+            <!-- <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite" /> -->
+         </path>
+      </svg>
+   </div>
+   <!-- end loader  -->
+
+
+   <!-- jQuery  -->
+   <script src="js/jquery-3.5.1.min.js"></script>
+   <!-- bootstrap 4 -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+   <!-- Selectpicker  -->
+   <script src="plugins/bootstrapselect-1.13.14/js/bootstrap-select.min.js"></script>
+   <!-- owl carousel  -->
+   <script src="plugins/owl-carousel/js/owl.carousel.min.js"></script>
+   <!-- Waypoint for animate  -->
+   <script src="plugins/jquery.waypoints.min.js"></script>
+   <!-- Input mask  -->
+   <script src="plugins/jquery.mask.min.js"></script>
+   <!-- Detects browser  -->
+   <script src="plugins/conditionizr.min.js"></script>
+   <!-- Cookie  -->
+   <script src="plugins/jquery.cookie.js"></script>
+   <!-- main js  -->
+   <script src="js/script.js"></script>
+</body>
+
+</html>

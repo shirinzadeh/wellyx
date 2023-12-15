@@ -1,0 +1,59 @@
+.block {
+   &-content {
+      background-color: $primary-base;
+      border-radius: 1rem;
+
+      @include medium {
+         padding: 2rem 1.5rem;
+      }
+   }
+
+   .heading {
+      color: $white;
+
+      &__subtitle {
+         color: $white;
+      }
+
+      &__title {
+         margin: .5rem 0;
+         @include small {
+            margin: 1rem 0;
+         }
+      }
+
+      &__text {
+         color: $white;
+         font-weight: 400;
+      }
+   }
+
+   &__btn {
+      padding: 0.75rem 1.75rem;
+      border-radius: 0.75rem;
+      display: inline-block;
+      @include transition;
+
+      &--rider {
+         background-color: $black;
+         color: $white !important;
+
+         :is(&:hover,&:focus) {
+            background-color: $white;
+            color: $black !important;
+            @include transition;
+         }
+      }
+
+      &--help {
+         background-color: $white;
+         color: $black !important;
+
+         :is(&:hover,&:focus) {
+            background-color: $black;
+            color: $white !important;
+            @include transition;
+         }
+      }
+   }
+}

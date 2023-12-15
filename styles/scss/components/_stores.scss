@@ -1,0 +1,64 @@
+.stores {
+   @include flex;
+   align-items: center;
+   gap: 1rem;
+
+   .store {
+      @include inline-flex;
+      align-items: center;
+      justify-content: start;
+      background-color: $black;
+      border-radius: 0.875rem;
+      color: $white !important;
+      padding: 0.75rem 1rem;
+      border: none;
+      @include transition;
+
+      @include medium {
+         padding-top: 1rem;
+         padding-bottom: 1rem;
+      }
+
+      &:hover {
+         background-color: $primary-base !important;
+         @include transition;
+      }
+
+      i {
+         font-size: 1.5rem;
+         &::before { display: block; }
+      }
+
+      &-text {
+         margin-left: .5rem;
+         text-align: left;
+
+         @include medium {
+            display: none;
+         }
+         &-top {
+            font-size: .5rem;
+            line-height: .75rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 600;
+         }
+
+         &-bottom {
+            font-weight: 500;
+            font-size: .875rem;
+            line-height: 1.25rem;
+         }
+      }
+
+      // &--white {
+      //    background-color: $white !important;
+      //    color: $black !important;
+
+      //    &:hover {
+      //       background-color: $primary-base;
+      //       color: $white !important;
+      //    }
+      // }
+   }
+}

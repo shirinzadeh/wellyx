@@ -1,0 +1,304 @@
+.hero {
+   @include extra-xlarge {
+      // height: calc(100% - 72px);
+   }
+   // @media screen and (min-height: 735px) {
+   //    padding: 4.26% 0 10%;
+   // }
+   // margin-top: 4%;
+   // padding: 3rem 0 7.5rem;
+   @include medium {
+      // flex-direction: column;
+      // gap: 2rem;
+   }
+
+   @include medium {
+      // padding: 3.5rem 0;
+      padding: 7.78% 0 15%;
+      justify-content: center;
+   }
+
+   &--absolute {
+      padding: 0;
+      position: absolute;
+      top: 50%;
+      @include transform(translateY(-50%));
+      left: 0;
+      width: 100%;
+
+      .heading {
+         margin-right: 0;
+      }
+   }
+
+   .heading {
+      max-width: 82%;
+      margin-bottom: 0;
+
+      @include large {
+         padding-right: 3rem;
+         max-width: 100%;
+      }
+      @include medium {
+         padding-right: 0;
+         line-height: 3.5rem;
+         text-align: center;
+      }
+      @include small {
+         margin-bottom: 0;
+      }
+
+      &__text {
+         color: $black;
+         @include small {
+            font-size: 0.875rem;
+         }
+      }
+   }
+
+   &__content {
+      height: fit-content;
+      flex: 1;
+      margin: auto;
+      // flex-basis: 49%;
+      @include medium {
+         max-width: 100%
+      }
+   }
+
+   &__stores {
+      margin-top: 1.5rem;
+
+      @include medium {
+         display: none;
+      }
+   }
+
+   &__image {
+      position: relative;
+      z-index: 1;
+
+      @include xlarge {
+         align-self: center;
+      }
+
+      @include small {
+         // margin: 0 auto 3.5rem;
+      }
+
+      &__mask {
+         @include flex;
+         justify-content: center;
+         img {
+            max-width: 100%;
+            height: auto;
+            @include extra-xlarge {
+               width: 100%;
+            }
+
+            @media screen and (max-height: 840px) {
+               width: initial !important;
+
+               
+            }
+         }
+      }
+      
+      // .absolute_cards {
+         .card_option {
+            position: absolute;
+            filter: drop-shadow(0px 16px 16px rgba(5, 15, 33, 0.08)) drop-shadow(0px 24px 32px rgba(5, 15, 33, 0.08));
+            border-radius: 0.875rem;
+            -webkit-backdrop-filter: blur(40px);
+               -moz-backdrop-filter: blur(40px);
+                    backdrop-filter: blur(40px);
+            @include animation(horizontal 4s linear infinite);
+
+            &__rect {
+               @include flex;
+               align-items: center;
+               background-color: rgba($white, 0.64);
+               border: 1px solid rgba($gray-500, 0.25);
+               border-radius: 0.875rem;
+               padding: 0.75rem 1rem;
+
+               @include medium {
+                  padding: .5rem;
+               }
+            }
+
+            &__content {
+               margin-left: .75rem;
+               width: 100%;
+            }
+
+            &__title {
+               // line-height: 1.5rem;
+               // @include xsmall {
+               //    font-size: .875rem;
+               //    line-height: 1.25rem;
+               // }
+               height: 0.75rem;
+               width: 60%;
+               background-color: $gray-500;
+               border-radius: 2px;
+            }
+
+            &__text {
+               // font-size: 0.875rem;
+               // line-height: 1.25rem;
+               // color: $dark-300;
+               // @include xsmall {
+               //    font-size: .75rem;
+               //    line-height: 1rem;
+               // }
+               height: 12px;
+               background-color: $gray-700;
+               border-radius: 2px;
+               margin-top: .5rem;
+            }
+
+            &__box {
+               width: 3rem;
+               flex: 0 0 auto;
+               height: 3rem;
+               border-radius: 0.75rem;
+               @include flex;
+               flex-direction: column;
+               text-align: center;
+               background-color: $black;
+               padding: 6px 0;
+
+               .num {
+                  font-weight: 600;
+                  font-size: 1rem;
+                  color: $white;
+                  line-height: 1.5rem;
+                  @include xsmall {
+                     font-size: 0.875rem;
+                     line-height: 1.25rem;
+                  }
+               }
+
+               .min {
+                  font-weight: 500;
+                  font-size: 0.875rem;
+                  line-height: 1.25rem;
+                  color: $dark-300;
+                  margin-top: -.5rem;
+                  @include small {
+                     margin-top: 0;
+                  }
+                  
+                  @include xsmall {
+                     font-size: 0.75rem;
+                     line-height: 1rem;
+                  }
+               }
+            }
+
+            &__link {
+               border: 1px solid $gray-500;
+               border-radius: 0.75rem;
+               margin-left: 0.75rem;
+               pointer-events: fill;
+
+               @include xsmall {
+                  margin-left: .5rem;
+               }
+               i {
+                  padding: 0.875rem 0.5rem;
+
+                  @include xsmall {
+                     font-size: .75rem;
+                     padding-top: .5rem;
+                     padding-bottom: .5rem;
+                  }
+               }
+            }            
+
+            &--first {
+               top: 38%;
+               left: -1.5rem;
+               width: 35.54%;
+
+               @include medium {
+                  top: auto;
+                  bottom: 33%;
+               }
+               @include small {
+                  left: 0;
+                  width: 43%;
+               }
+
+               .card_option {
+                  &__text {
+                     max-width: 81.6%;
+                     @include large {
+                        max-width: 100%;
+                     }
+                  }
+               }
+            }
+
+            &--second {
+               bottom: 10%;
+               left: 0;
+               width: 45%;
+
+               @include medium {
+                  bottom: 5%;
+                  left: auto;
+                  right: 0;
+               }
+
+               @include small {
+                  width: 64%;
+               }
+
+               .card_option {
+                  &__text {
+                     margin-right: 12px;
+                     max-width: 94%;
+                     @include large {
+                        max-width: 100%;
+                     }
+                  }
+
+                  &__rect {
+                     padding: .5rem;
+                  }
+               }
+            }
+
+            &--third {
+               right: -7%;
+               top: 55%;
+               width: 37%;
+
+               @include small {
+                  display: none;
+               }
+
+               .card_option__text {
+                  max-width: 83.68%;
+                  @include large {
+                     max-width: 100%;
+                  }
+               }
+            }
+         }
+   }
+}
+
+@include keyframes(horizontal) {
+   0% {
+      transform: translateY(-5px);
+   }
+   50% {
+      transform: translateY(5px);
+   }
+   100% {
+      transform: translateY(-5px);
+   }
+}

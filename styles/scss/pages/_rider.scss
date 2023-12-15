@@ -1,0 +1,287 @@
+.rider-body {
+   // On mobile, tablet devices
+   @include medium {
+      .container {
+         height: 100% !important;
+      }
+      .hero {
+         padding: 0;
+         height: calc(100vh - 80px); //nav height
+         @include flex;
+
+         &__content {
+            margin-top: 0 !important;
+            justify-content: center;
+            height: 100%;
+            @include flex;
+            flex-direction: column;
+         }
+      }
+   } // End On mobile, tablet devices
+
+   .hero {
+      // padding: 15% 0;
+      @include flex;
+      align-items: center;
+      height: calc(100vh - 96px); 
+
+      &__content {
+         margin: 0;
+         flex: 0 0 50.55%;
+
+         @include medium {
+            flex: 1;
+         }
+      }
+
+      .heading {
+         @include large  {
+            padding-right: 0;
+         }
+      }
+   }
+
+   //Intro
+   .intro {
+      padding: 3.5rem 0;
+      
+      &-wrapper {
+         max-width: 100%;
+         gap: 4.5rem;
+         align-items: center;
+      }
+
+      &_content {
+         flex: auto;
+         &__tabs {
+            gap: 4rem;
+         }
+         &__tab {
+            @include flex;
+            justify-content: space-between;
+
+            &__btn {
+               width: 100%;
+            }
+
+            .tail__title {
+               padding-bottom: 0;
+            }
+         } 
+      }
+   }
+
+   //Block
+   .rider-block {
+      .heading {
+         margin-bottom: 2rem;
+      }
+      .block-content {
+         // padding: 4rem 0 4rem 4.5rem;
+         @include flex-btwn;
+
+         @include medium {
+            flex-direction: column;
+            gap: 0;
+            text-align: center;
+         }
+         @include small {
+            gap: 1.5rem;
+         }
+      }
+
+      &__left {
+         flex-basis: 53%;
+         padding: 4rem 0 4rem 4.5rem;
+
+         @include medium {
+            flex-basis: 100%;
+            padding: 3rem;
+         }
+         @include small {
+            padding: 0;
+         }
+      }
+      
+      &__right {
+         @include flex;
+
+         img {
+            margin: auto;
+
+            @include small {
+               margin-right: auto;
+            }
+         }
+      }
+   }
+
+   //Types 
+   .types {
+      &__boxes {
+         @include flex;
+         gap: 1.5rem;
+         overflow-x: auto;
+         scroll-snap-type: x mandatory;
+         overflow-y: hidden;
+         -webkit-overflow-scrolling: touch;
+      }
+
+      &__box {
+         padding: 2rem;
+         background-color: $gray-300;
+         flex: 1 0 auto;
+         border-radius: 1rem;
+         scroll-snap-align: start;
+         scroll-snap-stop: always;
+
+         @include medium {
+            width: 248px;
+            padding: 1.5rem;
+         }
+
+
+         img {
+            margin-bottom: 2rem;
+
+            @include small {
+               margin-bottom: 1rem;
+            }
+         }
+
+         &__content {
+            margin-top: .5rem;
+
+            li {
+               @include flex;
+
+               @include medium {
+                  font-size: 0.875rem;
+                  line-height: 1.25rem;
+               }
+
+               &:not(:last-child) {
+                  margin-bottom: .5rem;
+               }
+
+               & > div {
+                  flex: 1;
+               }
+
+               & .tail-name { color: $dark-300; }
+               & .tail-text { 
+                  text-align: right;
+                  font-weight: 500;
+               }
+            }
+         }
+      }
+   }
+   
+   //Download
+   .download-wrapper {
+      max-width: 100%;
+
+      @include medium {
+         justify-content: center;
+      }
+
+      .download-content {
+         flex-basis: 52%;
+
+         @include medium {
+            flex-basis: 100%;
+         }
+
+         .heading {
+            max-width: 82%;
+            @include medium {
+               max-width: 100%;
+               margin-bottom: 1.5rem;
+            }
+
+            @include small {
+               text-align: center;
+            }
+
+            &__subtitle {
+               @include small {
+                  margin: auto;
+                  display: block;
+               }
+            }
+         }
+
+         .store {
+            min-width: 10.0625rem;
+
+            @include small {
+               min-width: auto;
+            }
+            
+            &-text {
+               display: block !important;
+               @include small {
+                  display: none !important;
+               }
+            }
+         }
+      }
+
+      .frame-curved {
+         width: auto;
+         height: auto;
+         background: none;
+         margin-right: 4.5%;
+
+         @include large {
+            margin-right: 0;
+         }
+         
+         @include medium {
+            display: none;
+         }
+         &-bg {
+            position: relative;
+            z-index: 0;
+         }
+
+         &-screen {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 6.71px 15.63px 26.74px 10.61px;
+         }
+
+         &-shadow {
+            position: absolute;
+            bottom: -5%;
+            z-index: -1;
+            right: -50%;
+            transform: translateX(-2%);
+
+            @include xlarge {
+               width: 100%;
+               right: 0;
+               bottom: -1%;
+
+               img {
+                  width: 100%;
+                  display: block;
+               }
+            }
+
+            // img {           
+            //    @include xlarge {
+            //       width: 100%; 
+            //       right: 0; 
+            //    }
+            // }
+
+            @include large {
+               display: none;
+            }
+         }
+      }
+   }
+}

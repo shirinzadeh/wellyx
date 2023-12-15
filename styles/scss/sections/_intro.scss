@@ -1,0 +1,113 @@
+.intro {
+   &-wrapper {
+      @include flex-btwn;;
+   }
+
+   // Carousel in small devices 
+   &-wrapper-sm {
+      .heading {
+         @include small {
+            text-align:center;
+         }
+      }
+      .tab-content > .tab-pane {
+         display: block;
+      }
+      
+      .intro_content__tabs {
+         @include medium {
+            align-items: center;
+            margin-top: 2rem;
+         }
+      }
+      .intro_content__tab {
+         .tail{
+            &__text{ 
+               display: block;
+            }
+         }
+      }
+   }
+
+   &_content {
+      flex: 0 0 59%;
+      @include flex;
+      flex-direction: column;
+      justify-content: center;
+
+
+      &__tabs {
+         flex-direction: column;
+         gap: 1.5rem;
+         border-bottom: 0;
+
+         .intro_content__tab {
+
+            &__btn {
+               @include flex;
+               align-items: center;
+               padding: 0;
+               border: none;
+               margin-bottom: 0;
+               height: 4rem;
+
+               @include medium {
+                  background-color: transparent;
+               }
+
+               @include small {
+                  height: auto;
+               }
+
+               &.nav-link:hover,
+               &.nav-link:focus{
+                  border-color: transparent;
+               }
+
+               &.active {
+                  border: none;
+                  background-color: transparent;
+
+                  i::before {
+                     content: '\e817';
+                     background-color: $primary-base;
+                     color: $white;
+                     @include transition;
+                  }
+
+                  .tail {
+                     &__title {
+                        color: $black;
+                     }
+                  }
+               }
+
+               .tail {
+                  color: $dark-300;
+                  text-align: left ;
+                  margin-left: 1rem;
+
+                  &__title {
+                     line-height: 1.5rem;
+                     font-weight: 500;
+                     padding-bottom: 4px;
+                  }
+                  &__text{
+                     font-size: 0.875rem;
+                     line-height: 1.25rem;
+
+                     @include small {
+                        display: block !important;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   &_image {
+      @include flex;
+      align-items: center;
+   }
+}

@@ -1,0 +1,87 @@
+.contact-page {
+
+   .main-input-group {
+      &:not(:last-child) {
+         margin-bottom: 0.75rem;
+      }
+   }
+
+   .elyx-section-big-bottom {
+      padding-bottom: calc(10rem - 6%);
+
+      @include medium {
+         padding-bottom: calc(7.5rem - 6%);
+      }
+
+      @include small {
+         padding-bottom: calc(5rem - 6%);
+      }
+   }
+
+   .hero {
+      gap: 2.5rem;
+      justify-content: end;
+      padding: 9.14% 0 14.641%;
+   }
+
+   .hero__content {
+      margin: 6.8% auto auto;
+      
+      &__contact {
+         margin-top: 1.5rem;
+         max-width: 82%;
+
+         @include medium {
+            max-width: 100%;
+         }
+   
+         &__box {
+            max-width: 65.36%;
+            @include medium {
+               max-width: 100%;
+            }
+            &:not(:last-child) {
+               margin-bottom: .5rem;
+            }
+         }
+         &__link {
+            @include inline-flex;
+            align-items: center;
+            width: 100%;
+            gap: 0.75rem;
+            padding: 1rem 1.25rem;
+            background-color: $white;
+            border: 1px solid $gray-400;
+            border-radius: 0.875rem;
+
+            @include small {
+               font-size: 0.875rem;
+               line-height: 1.25rem;
+            }
+   
+            i {
+               color: $primary-base;
+               font-size: 1.5rem;
+
+               @include small {
+                  font-size: 1.25rem;
+               }
+            }
+   
+            span {
+               display: inline-block;
+            }
+         }
+      }
+   }
+
+   .form {
+      align-self: baseline;
+      margin: 0;
+
+      textarea {
+         height: 10rem;
+         resize: none;
+      }
+   }
+}

@@ -1,0 +1,40 @@
+.redirect {
+   position: relative;
+   background-color: $primary-base;
+
+   .i-close-redirect {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      font-size: 1.25rem;
+   }
+
+   .heading__title {
+      margin-top: .25rem;
+   }
+
+   &__content {
+      @include flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      padding: 2.5rem 0;
+   }
+
+   .store {
+      background-color: $white;
+      color: $black !important;
+      padding-bottom: 0.75rem;
+      padding-top: .75rem;
+
+      :is(&:hover,&:focus,&:active) {
+         background-color: $black !important;
+         color: $white !important;
+      }
+      
+      &-text {
+         display: block !important;
+      }
+   }
+}

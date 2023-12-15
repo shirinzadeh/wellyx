@@ -1,0 +1,146 @@
+html {
+   width: 100%;
+   height: 100%;
+}
+
+body{
+   font-family: 'elyx';
+}
+
+ol {
+   padding-inline-start: 24px !important;
+
+   &.breadcrumb {
+      padding-inline-start: 0 !important;
+   }
+}
+
+a {
+   color: $black !important; 
+
+   &:hover {
+      text-decoration: none;
+   }
+}
+
+i { display: inline-block; }
+
+.btn[disabled] {
+   cursor: not-allowed !important;
+   filter: alpha(opacity=65);
+   opacity: .65;
+   -webkit-box-shadow: none;
+   box-shadow: none;
+}
+
+.h1 {
+   font-weight: bold;
+   font-size: 4rem;
+   line-height: 5rem;
+   
+   @include small {
+    font-size: 3rem; 
+    line-height: 4rem;
+ 
+   }
+   @include xsmall {
+      font-size: 1.75rem;
+      line-height: 2.5rem;
+   }
+}
+
+.h2 {
+   font-weight: bold;
+   font-size: 2.75rem; //44px
+   line-height: 4rem;
+
+   @include small {
+      font-size: 1.75rem;
+      line-height: 2.5rem;
+   }
+}
+
+.h3 {
+   font-weight: bold;
+   font-size: 2.25rem; //36px
+   line-height: 3.5rem; //56px
+
+   @include small {
+      font-size: 1.5rem;
+      line-height: 2.25rem;
+   }
+
+   &.h3-m {
+      font-weight: 500 !important;
+   }
+}
+
+.h4 {
+   font-weight: bold;
+   font-size: 1.75rem;
+   line-height: 2.5rem;   
+   @include small {
+      font-size: 1.5rem;
+      line-height: 2.25rem;
+   }
+
+   &.h4-sb {
+      font-weight: 600 !important;
+   }
+}
+
+.h5 {
+   font-weight: bold;
+   font-size: 1.5rem;
+   line-height: 2.25rem;
+
+   &.h5-sb {
+      font-weight: 600 !important;
+
+      @include small {
+         font-size: 1.25rem;
+         line-height: 2rem;
+      }
+   }
+
+   &.h5-m {
+      font-weight: 500 !important;
+   }
+}
+
+.h6 {
+   font-weight: bold;
+   font-size: 1.25rem;
+   line-height: 2rem;
+
+   @include small {
+      font-size: 1rem;
+      line-height: 1.5rem;
+   }
+
+   &.h6-sb {
+      font-weight: 600 !important;
+   }
+   &.h6-m {
+      font-weight: 500 !important;
+   }
+}
+
+//remove default input search close icon
+::-webkit-search-cancel-button {
+   -webkit-appearance:none;
+}
+
+//Bootstrap classes
+.btn {
+   padding: 0;
+   border: none;
+}
+
+textarea.form-control {
+   height: 3rem;
+}
+// .row > * {
+//    padding-right: 1.5rem;
+//    padding-left: 1.5rem;   
+// }

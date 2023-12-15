@@ -1,0 +1,85 @@
+.help-page {
+   .decoration-bg {
+      z-index: 1 ;
+   }
+}
+
+.header-help {
+   &__search {
+      :is(.dropdown-toggle:hover,.dropdown-toggle:focus,.dropdown-toggle:active) {
+         background-color: $white !important;
+      }
+   }
+}
+
+.help_faqs {
+   .help_faq {      
+      span {
+         font-weight: 600;
+      }
+
+      i {
+         color: $gray-500;
+      }
+   }
+}
+
+.helpinner-page {
+   .helpinner__tablist {
+      padding-top: 40px;
+
+      .nav {
+         padding: .5rem;
+         background-color: $gray-200;
+         border-radius: 1rem;
+
+         @include small {
+            padding: 0;
+            background-color: transparent;
+
+         }
+
+         &-link {
+            font-weight: 500;
+            padding: 1rem;
+            border-radius: 0.875rem;
+
+            @include small {
+               @include flex-btwn;
+               align-items: center;
+               // display: none;
+
+               &:not(:last-child) {
+                  margin-bottom: .5rem;
+               }
+               &:last-child {
+                  margin-bottom: 1rem;
+               }
+            }
+   
+            &.active {
+               background-color: $white;
+
+               @include small {
+                  @include flex;
+                  background-color: $primary-base;
+                  color: $white !important;
+                  margin-bottom: 1rem;
+               }
+            }
+
+            i {
+               font-size: 1.5rem;
+            }
+         }
+      }
+
+      &__faq {
+         padding: 1.25rem;
+
+         &:not(:last-child) {
+            margin-bottom: .5rem;
+         }
+      }
+   }
+}

@@ -1,0 +1,91 @@
+.share {
+   @include flex-btwn;
+   align-items: center;
+   padding: calc(1.25rem - 1px) 2rem ;
+   border: 1px solid $gray-400;
+   border-radius: 1rem;
+
+   @include small {
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1.25rem auto;
+   }
+
+   .icons {
+      border-radius: 0.625rem;
+      background-color: $gray-300;
+      @include transition;
+   }
+
+   &__content {
+      @include small {
+         text-align: center;
+      }
+
+      .recommend {
+         @include flex;
+         font-size: 0.875rem;
+         line-height: 1.25rem;
+         color: $gray-900;
+      }
+   }
+
+   &__btn {
+      padding: .5rem 1rem;
+
+      &:hover {
+         background-color: $gray-400;
+      }
+
+      &:focus {
+         background-color: $primary-base;
+          > * {
+               color: $white !important;
+            }
+      }
+      span {
+         margin-left: .5rem;
+         font-weight: 500;
+      }
+   }
+
+   .tail { 
+      font-weight: 600; 
+      margin-bottom: .25rem;
+      
+      @include small {
+         font-size: 0.875rem;
+         line-height: 1.25rem;
+      }
+   }
+
+   .social {
+      &__icon {
+         background-color: $gray-300;
+         @include transition;
+
+         &:hover {
+            background-color: $primary-base;
+            @include transition;
+
+            > * {
+               color: $white !important;
+            }
+         }
+
+         :is(&:active, &:focus) {
+            background-color: $primary-base;
+            color: $white;
+
+            i {
+               color: $white;
+            }
+         }
+      }
+
+      i {
+         color: $gray-900;
+         font-size: 1.25rem;
+      }
+   }
+}

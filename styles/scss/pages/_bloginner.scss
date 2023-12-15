@@ -1,0 +1,88 @@
+.bloginner {
+   padding-bottom: 7.5rem;
+   padding-top: calc(2.5rem + 96px); //add navbar height
+
+   @include small {
+      padding-bottom: 3rem;
+      padding-top: calc(1.5rem + 84px); //add navbar height
+   }
+
+   .content-article__title {
+      @include small {
+         margin-bottom: 0.75rem;
+      }
+   }
+
+   &__info {
+      @include flex-btwn;
+      margin-top: 1.5rem;
+
+      @include small {
+         flex-direction: column;
+         margin-top: 1rem;
+      }
+
+      &__left {
+         @include flex;
+         align-items: center;
+         gap: 1.5rem;
+
+         @include small {
+            margin-top: 1rem;
+            gap: .5rem;
+         }
+      }
+
+      :is(&__tag, &__duration) {
+         font-size: 0.75rem;
+         line-height: 1rem;
+         letter-spacing: 1.5px;
+         padding: .5rem 0.75rem;
+         text-transform: uppercase;
+         border-radius: 0.375rem;
+         text-align: center;
+         font-weight: bold;
+      }
+   
+      &__tag {
+         background-color: $success-light;
+         color: $success;
+      }
+
+      &__date {
+         font-weight: 600;
+         font-size: 0.875rem;
+         line-height: 1.25rem;
+         color: $gray-900;
+      }
+
+      &__duration {
+         color: $gray-900;
+         background-color: $gray-300;
+      }
+   }
+
+   &__content {
+      max-width: 65vw;
+      margin: auto;
+
+      @include large {
+         max-width: 100%;
+      }
+
+      &__image {
+         background-color: #C4C4C4;
+         min-height: 100px;
+         border-radius: 1rem;
+         margin: 2.5rem 0;
+
+         @include small {
+            margin: 1.5rem 0;
+         }
+
+         img {
+            border-radius: 1rem;
+         }
+      }
+   }
+}

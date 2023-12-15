@@ -1,0 +1,56 @@
+.features {
+   &__boxes {
+      @include flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+
+      @include medium {
+         flex-direction: row
+      }
+      &__row {
+         @include flex;
+         gap: 1.5rem;
+         // scroll-snap-align: start;
+         // scroll-snap-stop: always;
+
+         @include small {
+            gap: 1rem;
+         }
+      }
+   }
+
+   &__box {
+      padding: 2rem;
+      border-radius: 1rem;
+
+      @include medium {
+         width: 18rem;
+         padding: 1.5rem;
+      }
+
+      @include small {
+         width: 15.5rem;
+      }
+
+      i {
+         margin-bottom: 1rem;
+      }
+      
+      &__title {
+         padding-bottom: .5rem;
+      }
+
+      &__text {
+         color: $dark-300;
+
+         @include small {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+         }
+      }
+   }
+}

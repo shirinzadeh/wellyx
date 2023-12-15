@@ -1,0 +1,54 @@
+.dfeature {
+   @include small {
+      // padding-top: 0;
+   }
+   &-row {
+      @include flex-btwn;
+      align-items: center;
+      gap: 4rem;
+      
+      @include medium {
+         flex-direction: column;
+         gap: 1.5rem;
+      }
+
+      &:not(:last-child) {
+         margin-bottom: 4rem;
+
+         @include small {
+            margin-bottom: 2.5rem;
+         }
+      }
+
+      .heading__title {
+         @include small {
+            line-height: 2.5rem;
+            font-size: 1.75rem;
+         }
+      }
+   }
+
+   &__content {
+      flex-basis: 49%;
+      display: initial;
+
+      & > div { margin: auto; }
+
+      .heading__title {
+         @include small {
+            margin: .5rem 0;
+         }
+      }
+   }
+
+   &__image {
+      flex-basis: 46.8%;
+      @include flex;
+      align-items: center;
+      border-radius: 1rem;
+
+      img {
+         border-radius: 1rem;
+      }
+   }
+}

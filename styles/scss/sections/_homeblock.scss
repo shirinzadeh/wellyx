@@ -1,0 +1,33 @@
+.home-block {
+   .block-content {
+      & > div {
+         max-width: 66%;
+         margin: auto;
+         @include flex;
+         flex-direction: column;
+         align-items: center;
+   
+         @include medium {
+            max-width: 100%;
+         }
+      }   
+   }
+
+   .heading {
+      text-align: center;
+   }
+
+   .block__stores {
+      // margin-top: 1.5rem;
+
+      .store {
+         background-color: $white;
+         color: $black !important;
+
+         :is(&:hover,&:focus) {
+            background-color: $black !important;
+            color: $white !important;
+         }
+      }
+   }
+}

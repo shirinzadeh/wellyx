@@ -1,0 +1,66 @@
+.terms {
+   &__top {
+      padding: 6rem 0;
+
+      @include small {
+         padding-top: 3rem;
+      }
+
+      ol {
+         display: inline-block;
+   
+         li {
+            @include transition;
+            font-weight: 500;
+   
+            @include small {
+   
+               font-size: 0.875rem;
+               line-height: 1.25rem;
+            }
+   
+            &:not(:last-child) {
+               margin-bottom: 1rem;
+            }
+   
+            a { 
+               @include transition;
+               margin-left: .5rem;
+            }
+   
+            &:hover {
+               color: $primary-base !important;
+               
+               a { 
+                  color: $primary-base !important; 
+               }
+            }
+         }
+      }
+   }
+
+   &__heading {
+      margin-bottom: 2.5rem;
+
+      @include small {
+         margin-bottom: 1.5rem;
+      }
+
+      &__title {
+         margin-bottom: 1rem;
+      }
+
+      p {
+         color: $dark-300;
+         @include small {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+         }
+         span {
+            color: $primary-base;
+         }
+      }
+   }
+
+
+}

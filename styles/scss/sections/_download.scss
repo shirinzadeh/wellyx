@@ -1,0 +1,100 @@
+.download {
+   background-color: $primary-100;
+   &-wrapper {
+      @include flex-btwn;
+
+      @include medium {
+         flex-direction: column;
+      }
+   }
+
+   &-content {
+      flex: 0 0 59%;
+      @include flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include medium {
+         margin-top: 2rem;
+      }
+
+      .heading {
+         margin-bottom: 2rem;
+         @include medium {
+            text-align: center;
+            margin-bottom: 1.5rem;
+         }
+
+         &__title {
+            max-width: 85%;
+            @include medium {
+               max-width: 100%;
+            }
+         }
+
+         &__subtitle {
+            @include medium {
+               margin: auto;
+            }
+         }
+      }
+   }
+
+   &__contact {
+      @include flex;
+      gap: 2rem;
+      flex-direction: column;
+
+      @include medium {
+         // align-items: center;
+      }
+      @include small {
+         gap: 0
+      }
+
+      .download__form {
+         @include flex;
+
+         @include medium {
+            justify-content: space-between;
+         }
+         @include xsmall {
+            flex-direction: column;
+            gap: 1rem;
+         }
+
+         &__input {
+            margin-right: 1rem;
+            flex-basis: 53%;
+
+            @include medium{
+               flex-basis: 100%;
+            }
+            @include xsmall {
+               margin-right: 0;
+            }
+         }
+
+         &__btn {
+            padding: 0.75rem 1.75rem;
+         }
+      }
+
+      .coming__store {
+         @include inline-flex;
+         flex-direction: column;
+         padding-right: 1rem;
+         gap: .5rem;
+         align-items: stretch;
+
+         @include medium {
+            flex-direction: row;
+         }
+      }
+
+      .qrcode {
+         padding-left: 1rem;
+         border-left: 1px solid $gray-500;
+      }
+   }
+}

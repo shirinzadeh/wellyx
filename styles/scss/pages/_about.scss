@@ -1,0 +1,31 @@
+.about-page {
+   .header-rider {
+      background-image: url(../../images/about/header.png);
+      // z-index: -4;
+   }
+
+   .hero {
+      @include flex;
+
+      &__content {
+         flex: 0 0 67%;
+         margin: 0;
+      }
+
+      .heading {
+         max-width: 100%;
+      }
+   }
+
+   // .store {
+   //    &:hover {
+   //       background-color: $primary-base;
+   //    }
+   // }
+
+   .block {
+      .store:hover {
+         background-color: $black !important;
+      }
+   }
+}

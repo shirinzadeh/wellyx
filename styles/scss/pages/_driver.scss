@@ -1,0 +1,112 @@
+.driver-body {
+   .nav-link {
+      &::after {
+         background-color: $white;
+       }
+
+      :is(&:hover, &:focus) {
+         color: $white !important;
+
+         &::after {
+            background-color: $white;
+         }
+      }
+   }
+
+   .topfeature {
+      padding-top: 4.5rem;
+   }
+
+   .testimonial {
+      padding: 6.75rem 0 7.125rem;
+      text-align: center;
+
+      @include small {
+         padding: 3rem 0;
+      }
+
+      .item {
+         p {
+            margin-top: 5.375rem;
+
+            @include small {
+               margin-top: 4rem;
+            }
+
+            @include xsmall {
+               font-size: 0.875rem;
+               line-height: 1.25rem;
+            }
+         }
+      }
+
+      .heading {
+         margin-bottom: 0;
+      }
+
+      .owl-dots img {
+         @include small {
+            width: 40px;
+            height: 40px;
+         }
+      }
+   }
+
+   .stage {
+      padding-bottom: 7.5rem;
+      @include small {
+         padding-bottom: 3rem;
+      }
+   }
+}
+
+.header-form {
+   .hero {
+      @include flex;
+      padding: 0;
+
+      @include medium {
+         flex-direction: column;
+      }
+
+      &__content {
+         flex: 0 0 49%;
+         margin-left: 0;
+
+         @include small {
+            flex: none;
+            margin: 0;
+         }
+      }
+
+      .heading {
+         max-width: none;
+
+         &__text {
+            max-width: 82%;
+
+            @include medium {
+               max-width: 100%;
+            }
+         }
+      }
+   }
+
+   .form {
+      flex-basis: 40.4%;
+      margin: 5.68% 0 9.94%;
+
+      @include small {
+         margin: 1.5rem 0;
+      }
+
+      &__head {
+         text-align: left;
+      }
+
+      .main-input__text {
+         color: $dark-300;
+         margin-top: 1rem;
+      }
+   }
+}

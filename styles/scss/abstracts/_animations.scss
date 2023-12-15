@@ -1,0 +1,227 @@
+//Animation on scroll
+.elyx-animate {
+	opacity: 0;
+	visibility: hidden;
+}
+
+/************ BG CIRCLE ANIMATION ***********************/
+
+.animated_shape_absolute {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+}
+.circle-right{
+   position:fixed;
+   width:480px;
+   height:480px;
+   border-radius:50%;
+   background:$primary-base;
+   right:0;
+   top:5%;
+   z-index: -2;
+   @include filter(blur(500px));
+   animation:
+   xRight 10s linear infinite alternate,
+   yRight 5s infinite cubic-bezier(.5,500,.5,-500);
+   /* For blur to not slow down page load on mobile*/
+   @include backface-visibility(hidden);
+   @include perspective(1000);
+   @include transform(translate3d(0,0,0));
+   @include transform(translateZ(0)); // fix ios bug
+   /*end */
+
+   @include small {
+      width: 240px;
+      height: 240px;
+      @include filter(blur(350px));
+      animation: none !important; 
+   }
+
+   &--sticky {
+      position: sticky !important;
+      display: inline-block;
+   }
+}
+
+.circle-left{
+   position:fixed;
+   width:360px;
+   height:360px;
+   border-radius:50%;
+   background:$primary-base;
+   left:0;
+   top:50%;
+   z-index: -2;
+   animation: xLeft 10s linear infinite alternate,
+               yLeft 5s infinite cubic-bezier(.5,1000,.5,-1000);
+   @include filter(blur(400px));
+   /* For blur to not slow down page load on mobile*/
+   -webkit-backface-visibility: hidden;
+   -webkit-perspective: 1000;
+   -webkit-transform: translate3d(0,0,0);
+   -webkit-transform: translateZ(0); // fix ios bug
+   backface-visibility: hidden;
+   perspective: 1000;
+   transform: translate3d(0,0,0);
+   transform: translateZ(0);
+   /*end */
+
+   @include small {
+      width: 180px;
+      height: 180px;
+      @include filter(blur(250px));
+      animation: none !important; 
+
+   }
+
+   &--sticky {
+      position: sticky !important;
+      display: inline-block;
+   }
+}
+
+ 
+ @keyframes xLeft {
+    to {
+      left:calc(100% - 40px);
+    }
+ }
+ @keyframes yLeft {
+    to {
+      top:49.9%;
+    }
+ }
+
+ @keyframes xRight {
+    to {
+      right:calc(100% - 40px);
+    }
+ }
+ @keyframes yRight {
+    to {
+      top:4.9%;
+    }
+ }
+
+ // For IOS filter. ios not support blur filter (js include)
+// .circle-overlay {
+//    width: 100%;
+//    height: 100%;
+// }
+//  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+//    .ios.circle-overlay {
+//        -webkit-backdrop-filter: blur(400px); //Blurs bg behind it
+//    }
+// }
+
+/************* TEXT REVEAL ANIMATIONS **************/
+
+/* IF YOU CHANGE THE ANIMATION DURATION, CHANGE INTERVAL DURATION in JS AS WELL */
+//Animation duration
+$duration: 0.3s;
+
+.has-line-anim {
+   animation-name: lineToTop ,lineScale;
+   animation-duration: $duration, $duration;
+   animation-delay: 1s, 1.3s;
+   animation-fill-mode: both, both;
+   animation-timing-function: ease-out, ease-out;
+}  
+
+//default text anim
+.has-reveal-anim {
+   animation-name: unreveal;
+   animation-duration: $duration;
+   animation-delay: 1s;
+   animation-fill-mode: both;
+   animation-timing-function: ease-out;
+}
+
+//first revealed text 
+.has-line-anim-hidden-first {
+   animation-name: lineScaleOut, lineToBottom, lineToTop, lineScale;
+   animation-duration: $duration, $duration, $duration, $duration;
+   animation-delay: 1.6s, 1.9s, 3.6s, 3.9s;
+   animation-fill-mode: both, both, both, forwards;
+   animation-timing-function: ease-out, ease-out, ease-out, ease-out;
+}
+
+//first revealed text line
+.has-reveal-anim-hidden-first {
+   animation-name:reveal, unreveal ;
+   animation-duration: $duration, $duration;
+   animation-delay:2.1s, 3.6s ;
+   animation-fill-mode: both, both;
+   animation-timing-function: ease-out, ease-out; 
+}
+
+//second revealed text
+.has-reveal-anim-hidden-second {
+   animation-name:reveal,unreveal;
+   animation-duration: $duration, $duration;
+   animation-delay: 4.6s, 5.9s;
+   animation-fill-mode: both, both;
+   animation-timing-function: ease-out, ease-out;
+}
+
+// //second revealed text line
+.has-line-anim-hidden-second {
+   animation-name:lineScaleOut ,lineToBottom, lineToTop,  lineScale,  lineScaleOut, lineToBottom;
+   animation-duration: $duration, $duration, $duration, $duration, $duration, $duration;
+   animation-delay:4.2s, 4.5s, 5.9s,  6.2s, 6.5s, 6.8s;
+   animation-fill-mode: both, both,  both,forwards,  forwards, forwards;
+   animation-timing-function: ease-out, ease-out, ease-out, ease-out, ease-out, ease-out;
+}
+
+@include keyframes(reveal) {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
+}
+@include keyframes(unreveal) {
+   to {
+      opacity: 0;
+   }
+}
+@include keyframes(lineToTop) {
+   to {
+      bottom: 80%;
+   }
+}
+@include keyframes(lineToBottom) {
+   from {
+      bottom: 80%;
+   }
+   to {
+      bottom: 0%;
+   }
+}
+@include keyframes(lineScale) {
+   from {
+      // @include transform(scale(1));
+      width: 100%;
+   }
+   to {
+      // @include transform(scale(0));
+      width: 0;
+   }
+}
+@include keyframes(lineScaleOut) {
+   from {
+      // @include transform(scale(0));
+      width: 0;
+      opacity: 0
+   }
+   to {
+      // @include transform(scale(1));
+      width: 100%;
+      opacity: 1;
+   }
+}

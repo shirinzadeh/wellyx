@@ -1,0 +1,111 @@
+.faq {
+   &__inner {
+      max-width: 68.132%;
+      margin: auto;
+
+      @include large {
+         max-width: 100%;
+      }
+   }
+   .accordion {
+      &-item {
+         border-radius: 1rem;
+         border: none;
+
+         &:not(:last-child) {
+            margin-bottom: 1rem;
+         }
+
+         &:first-of-type {
+            .accordion-button {
+               border-top-left-radius: 1rem;
+               border-top-right-radius: 1rem;
+               // border-radius: 1rem;
+            }
+            .accordion-collapse {
+               border-bottom-left-radius: 1rem;
+               border-bottom-right-radius: 1rem;
+            }
+         }
+
+         &:last-of-type {
+            .accordion-button {
+               border-bottom-left-radius: 1rem;
+               border-bottom-right-radius: 1rem;
+               // border-radius: 1rem;
+            }
+            .accordion-collapse {
+               border-top-left-radius: 1rem;
+               border-top-right-radius: 1rem;
+            }
+         }
+      }
+      &-button {
+         background-color: $gray-300;
+         border: none;
+
+         &.collapsed::after {
+            @include transform(rotate(-90deg));
+         }
+
+         &:not(.collapsed) {
+            box-shadow: none;
+            // border-bottom-left-radius: 0;
+            // border-bottom-right-radius: 0;
+            // padding-bottom: 1rem;
+
+            &::after {
+               background-image: url(../../images/icons/Material/faq-minus.svg);
+            }
+
+            h6 {
+               color: $primary-base;
+            }
+         }
+
+         &::after {
+            background-image: url(../../images/icons/Material/faq-plus.svg);
+            width: 1.5rem;
+            height: 1.5rem;
+            background-size: 1.5rem;
+         }
+
+         h6 {
+            font-weight: 600;
+            line-height: 1.5rem;
+         }
+
+         &:hover {
+            background-color: $gray-400;
+         }
+      }
+
+      &-body {
+         padding: 0 1.5rem 1.5rem !important;
+         
+         @include small {
+            padding: 0 1rem 1rem !important;
+         }
+      }
+
+      &-collapse.collapsing {
+         transition-duration: .2s;
+      }
+   }
+}
+
+.accordion-item[data-trig="1"] {
+   .accordion-collapse {
+      border-top-left-radius: 0rem !important;
+      border-top-right-radius: 0rem !important;
+   }
+   .accordion-button {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+   }
+}
+
+// .accordion-collapse:not(.show) {
+//    border-top-left-radius: 1rem;
+//    border-top-right-radius: 1rem;  
+// }

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- Google Tag Manager -->
+   <script>(function (w, d, s, l, i) {
+         w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+               new Date().getTime(), event: 'gtm.js'
+         }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+               'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-W7DJKX7');</script>
+   <!-- End Google Tag Manager -->
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Elyx</title>
+   <link rel="shortcut icon" type="image/x-icon" href="images/icons/favicon/favicon.svg">
+   <!-- Bootstrap 4 -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+   <!-- Animate css  -->
+   <link rel="stylesheet" href="plugins/animate/animate.css">
+   <!-- Selectpicker  -->
+   <link rel="stylesheet" href="plugins/bootstrapselect-1.13.14/css/bootstrap-select.min.css">
+   <!-- Owl carousel  -->
+   <link rel="stylesheet" href="plugins/owl-carousel/css/owl.carousel.min.css">
+   <link rel="stylesheet" href="plugins/owl-carousel/css/owl.theme.default.min.css">
+   <!-- style css  -->
+   <link rel="stylesheet" href="styles/css/style.min.css">
+</head>
+
+<body class="help-page">
+
+   <div class="container">
+      <nav class="navbar navbar-expand-md">
+         <a href="index.html" class="logo d-none d-md-block"><img src="images/logo/logo.svg" alt="Logo" class="d-block"></a>
+         <a href="index.html" class="logo logo-sm d-md-none"><img src="images/logo/logo-sm.svg" alt="Logo" class="d-block"></a>
+
+         <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="icon-menu"></i>
+         </button>
+
+         <div class="side-menu">
+            <div class="container">
+               <div class="side-menu__head d-md-none">
+                  <a href="index.html" class="logo logo-sm-white"><img src="images/logo/logo-sm-white.svg" alt="Logo" class="d-block"></a>
+                  <button class="btn" type="button">
+                     <i class="icon-close icon-block i_close" id="closeIcon"></i>
+                  </button>
+               </div>
+
+               <div class="side-menu__inner">
+                  <ul class="navbar-nav">
+                     <li class="nav-item">
+                        <a class="nav-link" href="driver.html">Driver</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="rider.html">Rider</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="help.html">Help</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                     </li>
+                  </ul>
+
+                  <div class="navbar-langs d-md-none">
+                     <a href="#" class="navbar-lang">
+                        <i class="icon-lang icon-block"></i>
+                        <span>English</span>
+                     </a>
+                     <a href="#" class="navbar-lang">
+                        <i class="icon-location icon-block"></i>
+                        <span>Azerbaijan</span>
+                     </a>
+                  </div>
+
+                  <!-- Social icons  -->
+                  <div class="navbar-social social d-md-none">
+                     <a href="#" class="social__icon"><i class="icon-facebook icon-block"></i></a>
+                     <a href="#" class="social__icon"><i class="icon-instagram icon-block"></i></a>
+                     <a href="#" class="social__icon"><i class="icon-tik-tok icon-block"></i></a>
+                     <a href="#" class="social__icon"><i class="icon-twitter icon-block"></i></a>
+                  </div>
+                  <!-- End Social Icons -->
+               </div>
+            </div>
+         </div>
+      </nav>
+   </div>
+
+   <header class="header-help decoration-bg decoration-bg--help">
+      <div class="container">
+         <div class="header-help__inner">
+            <div class="header-help__heading heading">
+               <h3 class="h3">How can we help you?</h3>
+               <p>Elit vitae pharetra auctor commodo libero, elementum tellus. Et arcu sed nec accumsan at pellentesque neque. </p>
+            </div>
+            <div class="main-input header-help__search">
+               <!-- Select dropdownitem breadcrumbs  are added with js
+                  Breadcrumbs on dropdown item content --- script.js line601  -->
+               <select class="form__select form-select-search selectpicker" title="How can I join elyx?" data-live-search="true">
+                  <option value="#faq-inner.html" data-tokens="driver">What is a pre-authorization driver?</option>
+                  <option value="#faq-inner.html" data-tokens="driver">Is Elyx driver safe?</option>
+                  <option value="#faq-inner.html" data-tokens="driver">Elyx Business: How can I driver sign up ? </option>
+                  <option value="#faq-inner.html" data-tokens="china">China</option>
+                  <option value="#faq-inner.html" data-tokens="malayasia">Malayasia</option>
+                  <option value="#faq-inner.html" data-tokens="singapore">Singapore</option>
+               </select>
+
+               <!-- tags  -->
+               <ul class="header-help__search__tags">
+                  <li>
+                     <a href="">Driver explore</a>
+                  </li>
+                  <li>
+                     <a href="">Rider</a>
+                  </li>
+                  <li>
+                     <a href="">Help desk</a>
+                  </li>
+                  <li class="d-none d-sm-block">
+                     <a href="">Problem</a>
+                  </li>
+               </ul>
+               <!-- end tags  -->
+            </div>
+         </div>
+      </div>
+
+      <!-- BACKGROUND SHAPES  -->
+      <img src="images/decoration/decoration2.svg" class="decoration decoration2" alt="">
+      <img src="images/decoration/decoration3.svg" class="decoration decoration3" alt="">
+      <img src="images/decoration/decoration5.svg" class="decoration decoration5" alt="">
+      <img src="images/decoration/decoration6.svg" class="decoration decoration6" alt="">
+      <img src="images/decoration/decoration12.svg" class="decoration decoration12" alt="">
+      <!-- END BACKGROUND SHAPES  -->
+   </header>
+
+   <!-- FAQ  -->
+   <section class="help_faqs elyx-section">
+      <div class="container">
+         <div class="heading">
+            <h5 class="h5">Frequently Asked Questions</h5>
+         </div>
+         <!-- first row  -->
+         <div class="row mb-2">
+            <div class="col-md-6 mb-2 mb-md-0">
+               <a href="faq-inner.html" class="help_faq faq-button  hover">
+                  <span>Is Elyx safe?</span>
+                  <i class="icon-right-1 icon-block"></i>
+               </a>
+            </div>
+            <div class="col-md-6">
+               <a href="faq-inner.html" class="help_faq faq-button  hover">
+                  <span>Is Elyx safe?</span>
+                  <i class="icon-right-1 icon-block"></i>
+               </a>
+            </div>
+         </div>
+         <!-- end first row  -->
+
+         <!-- second row  -->
+         <div class="row mb-2">
+            <div class="col-md-6 mb-2 mb-md-0">
+               <a href="faq-inner.html" class="help_faq  faq-button hover">
+                  <span>What is a pre-authorization? </span>
+                  <i class="icon-right-1 icon-block"></i>
+               </a>
+            </div>
+            <div class="col-md-6">
+               <a href="faq-inner.html" class="help_faq faq-button  hover">
+                  <span>What is a pre-authorization? </span>
+                  <i class="icon-right-1 icon-block"></i>
+               </a>
+            </div>
+         </div>
+         <!-- end second row  -->
+
+         <!-- third row  -->
+         <div class="row mb-2">
+            <div class="col-md-6 mb-2 mb-md-0">
+               <a href="faq-inner.html" class="help_faq faq-button  hover">
+                  <span>Elyx Business: How can I sign up ? </span>
+                  <i class="icon-right-1 icon-block"></i>
+               </a>
+            </div>
+            <div class="col-md-6">
+               <a href="faq-inner.html" class="help_faq faq-button  hover">
+                  <span>Elyx Business: How can I sign up ? </span>
+                  <i class="icon-right-1 icon-block"></i>
+               </a>
+            </div>
+         </div>
+         <!-- end third row  -->
+      </div>
+   </section>
+   <!-- END FAQ  -->
+
+   <!-- FEATURES  -->
+   <section class="features categories">
+      <div class="container">
+         <div class="heading">
+            <h5 class="h5">All Categories</h5>
+         </div>
+
+         <div class="features__boxes">
+            <div class="features__boxes__row">
+               <div class="stretch-col    ">
+                  <a href="help-inner.html" class="features__box  hover">
+                     <i class="icon-car radius-56"></i>
+                     <h6 class="h6 features__box__title">Driving with Elyx</h6>
+                     <p class="features__box__text">Elit vitae pharetra auctor commodo libero, elementum tellus nisi</p>
+                  </a>
+               </div>
+               <div class="stretch-col    ">
+                  <a href="help-inner.html" class="features__box hover">
+                     <i class="icon-person radius-56"></i>
+                     <h6 class="h6 features__box__title">Riding with Elyx</h6>
+                     <p class="features__box__text">Elit vitae pharetra auctor commodo libero, elementum tellus nisi</p>
+                  </a>
+               </div>
+               <div class="stretch-col    ">
+                  <a href="help-inner.html" class="features__box  hover">
+                     <i class="icon-card radius-56"></i>
+                     <h6 class="h6 features__box__title">Payments</h6>
+                     <p class="features__box__text">Elit vitae pharetra auctor commodo libero, elementum tellus nisi</p>
+                  </a>
+               </div>
+            </div>
+            <div class="features__boxes__row">
+               <div class="stretch-col    ">
+                  <a href="help-inner.html" class="features__box hover">
+                     <i class="icon-error radius-56"></i>
+                     <h6 class="h6 features__box__title">Problems</h6>
+                     <p class="features__box__text">Elit vitae pharetra auctor commodo libero, elementum tellus nisi</p>
+                  </a>
+               </div>
+               <div class="stretch-col    ">
+                  <a href="help-inner.html" class="features__box  hover">
+                     <i class="icon-covid radius-56"></i>
+                     <h6 class="h6 features__box__title">Covid-19</h6>
+                     <p class="features__box__text">Elit vitae pharetra auctor commodo libero, elementum tellus nisi</p>
+                  </a>
+               </div>
+               <div class="stretch-col    ">
+                  <a href="help-inner.html" class="features__box hover ">
+                     <i class="icon-document radius-56"></i>
+                     <h6 class="h6 features__box__title">Applying to drive</h6>
+                     <p class="features__box__text">Elit vitae pharetra auctor commodo libero, elementum tellus nisi</p>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end second row  -->
+   </section>
+   <!-- END FEATURES  -->
+
+   <!-- BLOCK  -->
+   <section class="block home-block elyx-section elyx-section-big-bottom">
+      <div class="container">
+         <div class="block-content elyx-section-jr">
+            <div>
+               <div class="heading">
+                  <span class="heading__subtitle elyx-animate">Creative title</span>
+                  <h3 class="h3 heading__title elyx-animate">Can’t find your answer?</h3>
+                  <p class="heading__text elyx-animate">Ac ut libero dignissim duis velit. Amet et, consectetur turpis pharetra est. Eget eget erat imperdiet cum. Nam molestie purus nunc volutpat. Fusce sollicitudin pellentesque cum elit.</p>
+               </div>
+               <a href="contact.html" class="block__btn block__btn--help elyx-animate">
+                  <span>Contact us</span>
+               </a>
+            </div>
+         </div>
+         <!--.block-content -->
+      </div>
+   </section>
+   <!-- END BLOCK  -->
+
+   <footer class="footer ">
+      <div class="elyx-section-big">
+         <div class="container">
+            <div class="footer__top">
+               <div class="footer__top-left">
+                  <div><img src="images/logo/logo-white.svg" class="d-block" alt="Logo"></div>
+                  <p>Elit vitae pharetra auctor commodo libero, elementum tellus nisi, porta. Et arcu sed nec accumsan at pellentesque neque.</p>
+
+                  <!-- Social icons  -->
+                  <div class="social d-md-none">
+                     <a href="#" class="social__icon"><i class="icon-facebook icon-block"></i></a>
+                     <a href="#" class="social__icon"><i class="icon-instagram icon-block"></i></a>
+                     <a href="#" class="social__icon"><i class="icon-tik-tok icon-block"></i></a>
+                     <a href="#" class="social__icon"><i class="icon-twitter icon-block"></i></a>
+                  </div>
+                  <!-- End social icons  -->
+               </div>
+               <div class="footer__top-right">
+                  <!-- Block stores  -->
+                  <div class="footer__stores stores">
+                     <a href="#" class="btn store elyx-animate">
+                        <i class="icon-apple icon-block"></i>
+                        <div class="store-text">
+                           <div class="store-text-top">Download on the</div>
+                           <div class="store-text-bottom">App Store</div>
+                        </div>
+                     </a>
+                     <a href="#" class="btn store elyx-animate">
+                        <i class="icon-android icon-block"></i>
+                        <div class="store-text">
+                           <div class="store-text-top">Get it on </div>
+                           <div class="store-text-bottom">Google Play</div>
+                        </div>
+                     </a>
+                     <a href="#" class="btn store elyx-animate">
+                        <i class="icon-huawei icon-block"></i>
+                        <div class="store-text">
+                           <div class="store-text-top">available on the</div>
+                           <div class="store-text-bottom">AppGallery</div>
+                        </div>
+                     </a>
+                  </div>
+                  <!-- End Block stores  -->
+               </div>
+            </div>
+
+            <div class="footer__middle">
+               <div class="footer__middle-left">
+                  <div class="lang_area">
+                     <!-- Language dropdown  -->
+                     <nav class="lang_dropdown">
+                        <ul>
+                           <!-- <li class="current-menu-item"><li> -->
+                           <li class="select-lang">
+                              <a class="langtitle" type="button">
+                                 <i class="icon-lang icon-block"></i>
+                                 <span>English</span>
+                              </a>
+                              <ul class="langlist">
+                                 <li class="langoption">
+                                    <a>
+                                       <img src="images/icons/Flag/AZE.svg" class="img-fluid" alt="AZE">
+                                       <span>Azərbaycanca</span>
+                                    </a>
+                                 </li>
+                                 <li class="langoption">
+                                    <a>
+                                       <img src="images/icons/Flag/UK.svg" class="img-fluid" alt="UK">
+                                       <span>English</span>
+                                    </a>
+                                 </li>
+                                 <li class="langoption">
+                                    <a>
+                                       <img src="images/icons/Flag/RU.svg" class="img-fluid" alt="RU">
+                                       <span>Русский</span>
+                                    </a>
+                                 </li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </nav>
+
+                     <div class="d-flex">
+                        <i class="icon-location icon-block"></i>
+                        <span>Azerbaijan</span>
+                     </div>
+                     <!--End Language dropdown  -->
+                  </div>
+
+                  <!-- Social icons  -->
+                  <div class="social d-none d-md-flex">
+                     <a href="#" class="social__icon"><i class="icon-facebook icon-block"></i></a>
+                     <a href="#" class="social__icon"><i class="icon-instagram icon-block"></i></a>
+                     <a href="#" class="social__icon"><i class="icon-tik-tok icon-block"></i></a>
+                     <a href="#" class="social__icon"><i class="icon-twitter icon-block"></i></a>
+                  </div>
+                  <!-- End social icons  -->
+               </div> <!-- .footer__middle-left -->
+
+               <div class="footer__middle-right">
+                  <ul>
+                     <li>Products</li>
+                     <li><a href="rider.html"><span>Riders</span></a></li>
+                     <li><a href="driver.html"><span>Driver</span></a></li>
+                     <li><a href="" class="mb-0"><span>Cities</span></a></li>
+                  </ul>
+                  <ul>
+                     <li>About us</li>
+                     <li><a href="about.html"><span>About elyx</span></a></li>
+                     <li><a href="blog.html"><span>Blog</span></a></li>
+                     <li><a href="contact.html" class="mb-0"><span>Contact us</span></a></li>
+                  </ul>
+                  <ul>
+                     <li>Resources</li>
+                     <li> <a href="help.html"><span>Help Center</span></a></li>
+                     <li><a href="terms.html"><span>Terms and conditions</span></a></li>
+                     <li> <a href="privacy.html" class="mb-0"><span>Privacy Policy</span></a></li>
+                  </ul>
+               </div>
+               <!--.footer__middle-right-->
+            </div> <!-- .footer__middle -->
+         </div>
+      </div>
+
+      <div class="footer__bottom">
+         <div class="container">
+            <div class="footer__bottom__inner">
+               <div class="footer__bottom-left">
+                  <p>All Rights Reserved © 2021 Elyx, Inc.</p>
+                  <ul>
+                     <li><a href=""><span>Legal</span></a></li>
+                     <li><a href=""><span>Cookies</span></a></li>
+                  </ul>
+               </div>
+               <div class="footer__bottom-right">
+                  <p>from Azerbaijan with ❤️</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+
+   <!-- loader -->
+   <div id="elyx-loader" class="show fullscreen" title="2">
+      <svg class="circular" version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+         <path fill="#000" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+            <!-- <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite" /> -->
+         </path>
+      </svg>
+   </div>
+   <!-- end loader  -->
+
+   <!-- jQuery  -->
+   <script src="js/jquery-3.5.1.min.js"></script>
+   <!-- bootstrap 4 -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+   <!-- Selectpicker  -->
+   <script src="plugins/bootstrapselect-1.13.14/js/bootstrap-select.min.js"></script>
+   <!-- owl carousel  -->
+   <script src="plugins/owl-carousel/js/owl.carousel.min.js"></script>
+   <!-- Waypoint for animate  -->
+   <script src="plugins/jquery.waypoints.min.js"></script>
+   <!-- Input mask  -->
+   <script src="plugins/jquery.mask.min.js"></script>
+   <!-- Detects browser  -->
+   <script src="plugins/conditionizr.min.js"></script>
+   <!-- Cookie  -->
+   <script src="plugins/jquery.cookie.js"></script>
+   <!-- main js  -->
+   <script src="js/script.js"></script>
+</body>
+
+</html>

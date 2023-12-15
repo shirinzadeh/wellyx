@@ -1,0 +1,31 @@
+.frame {
+   background: url(../../images/frame/intro/phone-frame.svg) no-repeat;
+   background-position: center;
+   background-size: 100% 100% ;
+   // padding: 2.40% 5.30%;
+   width: 264px;
+   height: 532px;
+
+   @include medium{
+      margin: auto;
+   }
+
+   &__pane{
+      max-width: 100%;
+      &.active {
+         height: 100%;
+      }
+
+      &__img {
+         @include flex-center;
+         height: 100%;
+   
+         img {
+            max-width: 100%;
+          //   height: 100%;
+            object-fit: contain;
+            border-radius: 30px;
+         }
+      }
+   }
+ }

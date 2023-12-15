@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- Google Tag Manager -->
+   <script>(function (w, d, s, l, i) {
+         w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+               new Date().getTime(), event: 'gtm.js'
+         }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+               'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-W7DJKX7');</script>
+   <!-- End Google Tag Manager -->
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Elyx</title>
+   <link rel="shortcut icon" type="image/x-icon" href="images/icons/favicon/favicon.svg">
+   <!-- Bootstrap 4 -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+   <!-- Animate css  -->
+   <link rel="stylesheet" href="plugins/animate/animate.css">
+   <!-- Selectpicker  -->
+   <link rel="stylesheet" href="plugins/bootstrapselect-1.13.14/css/bootstrap-select.min.css">
+   <!-- Owl carousel  -->
+   <link rel="stylesheet" href="plugins/owl-carousel/css/owl.carousel.min.css">
+   <link rel="stylesheet" href="plugins/owl-carousel/css/owl.theme.default.min.css">
+   <!-- style css  -->
+   <link rel="stylesheet" href="styles/css/style.min.css">
+</head>
+
+<body class="driverform-page">
+   <div class="container">
+      <nav class="form-step-nav">
+         <!-- Go back button  -->
+         <button class="btn step_icon prevBtn invisible"><i class="icon-right-1 icon-block icon-round"></i></button>
+         <!-- End go back button  -->
+
+         <!-- Form Steps -->
+         <div class="form-step-row form_step_panel">
+            <div class="form-step">
+               <a href="#step-1" type="button" class=" step-active">
+                  <p>1</p>
+                  <span>Personal info</span>
+               </a>
+            </div>
+            <div class="form-step">
+               <a href="#step-2" type="button" disabled="disabled" class="form-step__link step-default">
+                  <p>2</p>
+                  <span>Vehicle info</span>
+               </a>
+            </div>
+            <div class="form-step">
+               <a href="#step-3" type="button" disabled="disabled" class="form-step__link step-default">
+                  <p>3</p>
+                  <span>Documents & feesspan</span>
+               </a>
+            </div>
+            <div class="form-step">
+               <a href="#step-4" type="button" disabled="disabled" class="step-default step-default">
+                  <p>4</p>
+                  <span>Payment details</span>
+               </a>
+            </div>
+         </div>
+         <!-- End Form Steps  -->
+
+         <!-- Close button  -->
+         <a href="driver.html" class="step_icon"><i class="icon-close icon-block icon-round"></i></a>
+         <!-- End close button  -->
+      </nav>
+   </div>
+
+   <section class="driverform-content">
+      <div class="container h-100">
+         <div class="d-flex h-100">
+            <form action="" class="form" novalidate>
+               <!-- form content 1  -->
+               <div class="setup-content" id="step-1">
+                  <div class="form__head">
+                     <h6 class="h6 h6-sb">Personal info</h6>
+                     <p class="form__text">Vel curabitur sociis nec sollicitudin amet turpis cras netus vulputate mattis eleifend.</p>
+                  </div>
+
+                  <div class="main-input">
+                     <!-- 1st field  -->
+                     <div class="main-input-group">
+                        <div class="form-floating">
+                           <input type="text" class="form-control main-input__field form_field name" id="name " placeholder="First Name" required>
+                           <label for="name">First Name</label>
+                           <small class="form-text small-text">Please write your first name</small>
+                        </div>
+                     </div>
+                     <!--End 1st field  -->
+
+                     <!-- 2nd field  -->
+                     <div class="main-input-group">
+                        <div class="form-floating">
+                           <input type="text" class="form-control main-input__field form_field lastname" id="lastname " placeholder="Last Name" required>
+                           <label for="lastname">Last Name</label>
+                           <small class="form-text small-text">Please write your last name</small>
+                        </div>
+                     </div>
+                     <!-- End 2nd field   -->
+
+                     <!-- 3rd field  -->
+                     <div class="main-input-group">
+                        <div class="form-floating">
+                           <input type="tel" class="form-control main-input__field form_field" id="floatingPhone " placeholder="Phone number" value="" minlength="3" maxlength="12" required>
+                           <label for="floatingPhone">Phone number</label>
+                           <small class="form-text small-text">Please write your phone number</small>
+                        </div>
+                     </div>
+                     <!-- End 3rd field   -->
+
+                     <!-- 4th  field  -->
+                     <div class="main-input-group">
+                        <div class=" form-floating">
+                           <input type="text" class="form-control main-input__field form_field" id="refcode " placeholder="Referal code" required>
+                           <label for="refcode">Referal code</label>
+                           <small class="form-text small-text">Please write your referal code</small>
+                        </div>
+                        <p class="small-text main-input-group__text">If someone referred you, enter their code</p>
+                     </div>
+                     <!-- End 4th field   -->
+
+                     <!-- 5th field  -->
+                     <div class="main-input-group">
+                        <div class="form-floating">
+                           <input type="text" class="form-control main-input__field form_field" id="refcode" placeholder="Referal code" required>
+                           <label for="refcode">National ID</label>
+                           <small class="form-text small-text">Please write your national ID</small>
+                        </div>
+                        <p class="small-text">If someone referred you, enter their code</p>
+                     </div>
+                     <!-- End 5th field   -->
+
+                     <!-- 6th field  -->
+                     <div class="main-input-group">
+                        <div class="form-floating">
+                           <input type="text" class="form-control main-input__field form_field" id="license " placeholder="Driver licence" required>
+                           <label for="license">Driver licence</label>
+                           <small class="form-text small-text">Please write your driver license</small>
+                        </div>
+                        <p class="small-text">If someone referred you, enter their code</p>
+                     </div>
+                     <!-- End 6th field   -->
+
+                     <!-- 7th field  -->
+                     <div class="main-input-group">
+                        <div class="form-floating">
+                           <input type="password" class="form-control main-input__field form_field" id="driverFormPassword " placeholder="Password" required>
+                           <label for="password">Password</label>
+                           <small class="form-text small-text">Please write your password</small>
+                        </div>
+                        <button class="btn input_icon" type="button" id="togglePassword"><i class="icon-eye-on"></i></button>
+                     </div>
+                     <!-- End 7th field   -->
+
+                     <button class="btn main-btn form__button nextBtn pull-right d-block w-100" type="button">Continue</button>
+                  </div>
+                  <!-- .main-input-->
+               </div>
+               <!-- end form content 1 -->
+
+               <!-- Form content 2nd  -->
+               <div class="setup-content" id="step-2">
+                  <div class="form__head">
+                     <h6 class="h6 h6-sb">Vehicle info</h6>
+                     <p class="form__text">Vel curabitur sociis nec sollicitudin amet turpis cras netus vulputate mattis eleifend.</p>
+                  </div>
+
+                  <div class="main-input">
+                     <!-- 1st field  -->
+                     <div class="main-input-group">
+                        <select name="" id="vehicle " class="selectpicker dropup_false form__select form-select-arrow form_field" title="" required>
+                           <option value="" selected></option>
+                           <option value="BMW">BMW</option>
+                           <option value="Mercedes">Mercedes</option>
+                           <option value="Audio">Audio</option>
+                        </select>
+                        <label for="vehicle" class="form__label">Vehicle</label>
+                     </div>
+                     <small class="form-text small-text">Please write your first name</small>
+                     <!-- end 1st field  -->
+
+                     <!-- 2nd input  -->
+                     <div class="main-input-group">
+                        <div class="position-relative">
+                           <select name="" id="vehicleModel " class="selectpicker form__select form-select-arrow form_field" title="" required>
+                              <option value="" selected></option>
+                              <option value="X5">X5</option>
+                              <option value="Grandeur">Grandeur</option>
+                              <option value="X6">X6</option>
+                           </select>
+                           <label for="vehicleModel" class="form__label">Vehicle model</label>
+                        </div>
+                        <p class="small-text">If you don't find your vehicle model from list then let us know at <a href="mailto:info@elyx.com"><span>info@elyx.com</span></a> </p>
+                     </div>
+                     <!-- end 2nd field  -->
+
+                     <!-- 3rd field  -->
+                     <div class="main-input-group">
+                        <select name="" id="vehicleYear " class="selectpicker form__select form-select-arrow form_field" title="" required>
+                           <option value="" selected></option>
+                           <option value="2000">2000</option>
+                           <option value="2001">2001</option>
+                           <option value="2002">2002</option>
+                        </select>
+                        <label for="vehicleYear" class="form__label">Vehicle year</label>
+                     </div>
+                     <!-- end 3rd field  -->
+
+                     <!-- 4th field  -->
+                     <div class="main-input-group">
+                        <div class="form-floating">
+                           <input type="text" class="form-control main-input__field form_field" id="vehicleNum" placeholder="Vehicle Number" required>
+                           <label for="vehicleNum">Vehicle number</label>
+                           <small class="form-text small-text">Please write your vehicle number</small>
+                        </div>
+                     </div>
+                     <!-- end 4th field  -->
+
+                     <!-- 5th field  -->
+                     <div class="main-input-group">
+                        <select name="" id="vehicleColor " class="selectpicker form__select form-select-arrow form_field" title="" required>
+                           <option value="" selected></option>
+                           <option value="99 VM 666">color1</option>
+                           <option value="99 VM 665">color2</option>
+                           <option value="99 VM 664">color3</option>
+                        </select>
+                        <label for="vehicleColor" class="form__label">Vehicle color</label>
+                     </div>
+                     <!-- end 5th field  -->
+
+                     <!-- Next nutton  -->
+                     <button class="btn main-btn form__button nextBtn pull-right d-block w-100" type="button">Continue</button>
+                     <!-- End next button  -->
+
+                  </div> <!-- .main-input-->
+               </div>
+               <!-- End Form content 2nd  -->
+
+               <!-- Form content 3rd  -->
+               <div class="setup-content" id="step-3">
+                  <div class="form__head">
+                     <h6 class="h6 h6-sb">Documents & fees</h6>
+                     <p class="form__text">Cursus fames eu velit euismod sed magna venenatis. Mauris ultrices placerat tellus, blandit. </p>
+                  </div>
+                  <div class="browse-file">
+                     <div class="browse-file-label">Driving license <span>*</span></div>
+                     <button class="btn browse-file-icon">
+                        <i class="icon-plus radius-48"></i>
+                     </button>
+                  </div>
+                  <div class="browse-file">
+                     <div class="d-flex flex-column">
+                        <div class="browse-file-label  mb-1">Insure <span>*</span></div>
+                        <span class="browse-file-name">document_45334_last.pdf</span>
+                     </div>
+                     <button class="btn browse-file-icon browse-file-icon--remove">
+                        <i class="icon-delete radius-48"></i>
+                     </button>
+                  </div>
+                  <div class="browse-file">
+                     <div class="browse-file-label">Bank account <span>*</span></div>
+                     <button class="btn browse-file-icon">
+                        <i class="icon-plus radius-48"></i>
+                     </button>
+                  </div>
+                  <div class="browse-file">
+                     <div class="browse-file-label">Taxes</div>
+                     <button class="btn browse-file-icon">
+                        <i class="icon-plus radius-48"></i>
+                     </button>
+                  </div>
+
+                  <button class="btn main-btn form__button nextBtn pull-right d-block w-100" type="button">Continue</button>
+
+
+               </div>
+               <!-- End Form content 3rd  -->
+
+               <!-- Form content 4th  -->
+               <div class="setup-content " id="step-4">
+                  <div class="setup-content-inner">
+                     <div class="form__head">
+                        <h6 class="h6 h6-sb">Payment details</h6>
+                        <p class="form__text">Vel curabitur sociis nec sollicitudin amet turpis cras netus vulputate mattis eleifend.</p>
+                     </div>
+
+                     <div class="main-input">
+                        <!-- 1st field  -->
+                        <div class="main-input-group">
+                           <select name="" id="vehicle " class="selectpicker form__select dropup_false form-select-arrow form_field" title="" required>
+                              <option value="" selected></option>
+                              <option value="BMW">BMW</option>
+                              <option value="Mercedes">Mercedes</option>
+                              <option value="Audio">Audio</option>
+                           </select>
+                           <label for="vehicle" class="form__label">Vehicle</label>
+                        </div>
+                        <small class="form-text small-text">Please write your first name</small>
+                        <!-- End 1st field  -->
+
+                        <!-- 2nd field  -->
+                        <div class="main-input-group">
+                           <div class="position-relative">
+                              <select name="" id="vehicleModel " class="selectpicker form__select form-select-arrow form_field" title="" required>
+                                 <option value="" selected></option>
+                                 <option value="X5">X5</option>
+                                 <option value="Grandeur">Grandeur</option>
+                                 <option value="X6">X6</option>
+                              </select>
+                              <label for="vehicleModel" class="form__label">Vehicle model</label>
+                           </div>
+                           <p class="small-text">If you don't find your vehicle model from list then let us know at <a href="mailto:info@elyx.com"><span>info@elyx.com</span></a> </p>
+                        </div>
+                        <!-- End 2nd field  -->
+
+                        <!-- 3rd field  -->
+                        <div class="main-input-group">
+                           <div class="position-relative">
+                              <select name="" id="vehicleModel " class="selectpicker form__select form-select-arrow form_field" title="" required>
+                                 <option value="" selected></option>
+                                 <option value="X5">X5</option>
+                                 <option value="Grandeur">Grandeur</option>
+                                 <option value="X6">X6</option>
+                              </select>
+                              <label for="vehicleModel" class="form__label">Vehicle model</label>
+                           </div>
+                           <p class="small-text">If you don't find your vehicle model from list then let us know at <a href="mailto:info@elyx.com"><span>info@elyx.com</span></a> </p>
+                        </div>
+                        <!-- End 3rd field  -->
+
+                        <!-- 4th field  -->
+                        <div class="main-input-group">
+                           <div class="form-floating">
+                              <input type="text" class="form-control main-input__field form_field" id="refcode " placeholder="Referal code" required>
+                              <label for="refcode">National ID</label>
+                              <small class="form-text small-text">Please write your national ID</small>
+                           </div>
+                           <p class="small-text">If someone referred you, enter their code</p>
+                        </div>
+                        <!-- End 4th field  -->
+
+                        <!-- 5th field  -->
+                        <div class="main-input-group">
+                           <div class="position-relative">
+                              <select name="" id="vehicleModel " class="selectpicker form__select form-select-arrow form_field" title="" required>
+                                 <option value="" selected></option>
+                                 <option value="X5">X5</option>
+                                 <option value="Grandeur">Grandeur</option>
+                                 <option value="X6">X6</option>
+                              </select>
+                              <label for="vehicleModel" class="form__label">Vehicle model</label>
+                           </div>
+                           <p class="small-text">If you don't find your vehicle model from list then let us know at <a href="mailto:info@elyx.com"><span>info@elyx.com</span></a> </p>
+                        </div>
+                        <!-- End 5th field  -->
+
+                        <!-- Next button  -->
+                        <button class="btn main-btn form__button  nextBtn d-block w-100" type="button">Continue</button>
+                        <!-- End ext button  -->
+
+                     </div> <!-- .main-input-->
+                  </div>
+
+                  <!-- SUCCES MODAL  -->
+                  <div id="confirmReq" class="js-hidden">
+                     <div class="form__head">
+                        <img src="images/icons/Check.svg" alt="Check">
+                        <h6 class="h6 h6-sb">Your request submited</h6>
+                        <p class="form__text">We contact as soon as you.
+                           Viverra magna viverra vulputate dictum feugiat facilisis. Sit egestas massa dictum metus, mollis a ullamcorper.
+
+                           If you have a question contact <a href="mailto:info@elxy.com"><span>info@elxy.com</span></a></p>
+                     </div>
+                     <a href="index.html" class="btn main-btn form__button d-block w-100">Home page</a>
+                  </div>
+                  <!-- END SUCCES MODAL  -->
+
+               </div>
+               <!-- End Form content 4th  -->
+
+            </form>
+         </div>
+      </div>
+   </section>
+
+   <!-- loader -->
+   <div id="elyx-loader" class="show fullscreen" title="2">
+      <svg class="circular" version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+         <path fill="#000" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+            <!-- <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite" /> -->
+         </path>
+      </svg>
+   </div>
+   <!-- end loader  -->
+
+   <!-- jQuery  -->
+   <script src="js/jquery-3.5.1.min.js"></script>
+   <!-- bootstrap 4 -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+   <!-- Selectpicker  -->
+   <script src="plugins/bootstrapselect-1.13.14/js/bootstrap-select.min.js"></script>
+   <!-- owl carousel  -->
+   <script src="plugins/owl-carousel/js/owl.carousel.min.js"></script>
+   <!-- Waypoint for animate  -->
+   <script src="plugins/jquery.waypoints.min.js"></script>
+   <!-- Input mask  -->
+   <script src="plugins/jquery.mask.min.js"></script>
+   <!-- Detects browser  -->
+   <script src="plugins/conditionizr.min.js"></script>
+   <!-- Cookie  -->
+   <script src="plugins/jquery.cookie.js"></script>
+   <!-- main js  -->
+   <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+.faq-page {
+   .faq-inner {
+      &__content {
+         padding: 2.5rem 0;
+      }
+
+      p {
+         white-space: pre-line;
+      }
+   }
+}

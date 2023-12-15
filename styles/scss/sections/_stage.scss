@@ -1,0 +1,67 @@
+.stage {
+   &__boxes {
+      @include flex;
+      gap: 1.5rem;
+      
+      @include medium{
+         overflow-x: auto;
+         scroll-snap-type: x mandatory;
+         overflow-y: hidden;
+         -webkit-overflow-scrolling: touch;
+      }
+   }
+
+   &__box {
+      border-radius: 1rem;
+      padding: 2rem;
+      position: relative;
+      z-index: 0;
+      flex: 1;
+      
+      @include medium{
+         scroll-snap-align: start;
+         scroll-snap-stop: always;
+         min-width: 15.5rem;
+      }
+
+      @include small {
+         padding: 1.5rem;
+      }
+
+      &::after {
+         content: '';
+         position: absolute;
+         top: 0;
+         right: 1.5rem;
+         width: -webkit-calc(100% - 1.5rem);
+         width:         calc(100% - 1.5rem);
+         height: 100%;
+         z-index: -1;
+      }
+
+      i {
+         margin-bottom: 1.5rem;
+      }
+
+      &--first {
+         &::after {
+            background: url(../../images/driver/stage/1.svg) no-repeat right center;
+         }
+      }
+      &--second {
+         &::after {
+            background: url(../../images/driver/stage/2.svg) no-repeat right center;
+         }
+      }
+      &--third {
+          &::after {
+            background: url(../../images/driver/stage/3.svg) no-repeat right center;
+         }
+      }
+      &--fourth {
+          &::after {
+            background: url(../../images/driver/stage/4.svg) no-repeat right center;
+         }
+      }
+   }
+}
